@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frutos de Goiás - Sorocaba</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Ir para início">
+        <img class="brand-logo" src="img/LOGO FRUTOS DE GOIAS.png" alt="Frutos de Goiás" />
+        <div class="brand-text">
+          <span class="brand-name">Frutos de Goiás</span>
+          <span class="brand-sub">Sorocaba</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Menu principal">
+        <a href="index.html#inicio">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="loja.html">Loja</a>
+        <a href="https://wa.me/5515991764745"> Contato</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- menu mobile -->
+    <div class="nav-mobile" hidden>
+      <a href="index.html#inicio">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="loja.html">Loja</a>
+      <a href="https://wa.me/5515991764745"> Contato</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- HERO SLIDER -->
+    <section class="hero">
+      <div class="hero-slider" data-slider="hero" data-autoplay="true" data-interval="600">
+        <button class="slider-arrow prev1" type="button" aria-label="Slide anterior">‹</button>
+        <button class="slider-arrow next1" type="button" aria-label="Próximo slide">›</button>
+
+        <div class="slides">
+          <!-- Slide 1 (igual: capa + 3 embalagens empilhadas) -->
+          <article class="slide is-active" style="--bg:url('img/capaq_edited.png');">
+            <div class="container slide-grid">
+              <div class="slide-content">
+                <h1 class="slide-title">
+                  LANÇAMENTO<br><strong>LINHA PROTEICA</strong>
+                </h1>
+                <p class="slide-subtitle">O sabor que sustenta sua rotina</p>
+              </div>
+
+              <div class="slide-media">
+                <div class="pack-stack pack-stack--3" aria-label="Produtos linha proteica">
+                  <img src="img/morango.png" alt="Morango em pedaços - Proteína" />
+                  <img src="img/cookies.png" alt="Cookies'n Cream - Proteína" />
+                  <img src="img/chocolate.png" alt="Chocolate Belga - Proteína" />
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 2 (exemplo: pote + palito) -->
+          <article class="slide" style="--bg:url('img/capaq_edited.png');">
+            <div class="container slide-grid">
+              <div class="slide-content">
+                <h1 class="slide-title">
+                  NOVIDADE<br><strong>GELADA!</strong>
+                </h1>
+                <p class="slide-subtitle">Chegou o novo sabor da Frutos de Goiás</p>
+              </div>
+
+              <div class="slide-media">
+                <div class="pack-duo" aria-label="Novidade">
+                  <img src="img/pote coco.png" alt="Pote Ninho com Coco em Flocos" />
+                  <img class="ninho" src="img/ninho com coco.png" alt="Picolé Ninho com Coco em Flocos" />
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 3 (Linha Gourmet com 3 produtos no layout “triângulo”) -->
+          <article class="slide" style="--bg:url('img/capaq_edited.png');">
+            <div class="container slide-grid">
+              <div class="slide-content">
+                <h1 class="slide-title">
+                  LINHA<br><strong>GOURMET</strong>
+                </h1>
+                <p class="slide-subtitle">Sabor premium pra surpreender</p>
+              </div>
+
+              <div class="slide-media">
+                <div class="pack-trio" aria-label="Linha gourmet">
+                  <img class="pack-trio__a" src="img/pistache premium.png" alt="Pistache Premium" />
+                  <img class="pack-trio__b" src="img/pistache zero.png" alt="Pistache Zero Açúcar" />
+                  <img class="pack-trio__c" src="img/ninho com pistache.png" alt="Ninho com Pistache" />
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="slider-dots" aria-label="Navegação de slides"></div>
+      </div>
+    </section>
+
+    <section class="parallax" aria-hidden="true"></section>
+
+    <!-- NOSSOS PRODUTOS -->
+    <section id="produtos" class="section section-green">
+      <div class="container">
+        <h2 class="section-title">Nossos Produtos</h2>
+
+        <div class="product-slider" data-slider="products">
+          <button class="slider-arrow prev" type="button" aria-label="Anterior">‹</button>
+          <button class="slider-arrow next" type="button" aria-label="Próximo">›</button>
+
+          <div class="slides">
+            <!-- 1 Sorvetes -->
+            <article class="product-slide is-active">
+              <div class="product-grid">
+                <div class="product-left">
+                  <h3 class="product-title">Sorvetes</h3>
+                  <p class="product-text">
+                    Uma explosão de sabor que se desfaz na boca, mesclando a doçura dos ingredientes com uma refrescante
+                    leveza, perfeita para qualquer momento, de um dia quente a uma celebração especial.
+                  </p>
+                  <a class="link-light" href="produtos.html">ver toda a linha</a>
+                </div>
+
+                <div class="product-right">
+                  <div class="product-circle">
+                    <img src="img/sorvete.png" alt="Sorvetes" />
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2 Açaí -->
+            <article class="product-slide">
+              <div class="product-grid">
+                <div class="product-left">
+                  <h3 class="product-title">Açaí</h3>
+                  <p class="product-text">
+                    O verdadeiro açaí, com aquele gostinho de quero mais, é da Frutos de Goiás!
+                  </p>
+                  <a class="link-light" href="produtos.html">ver toda a linha</a>
+                </div>
+
+                <div class="product-right">
+                  <div class="product-circle">
+                    <img src="img/açai.png" alt="Açaí" />
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3 Zero Açúcar -->
+            <article class="product-slide">
+              <div class="product-grid">
+                <div class="product-left">
+                  <h3 class="product-title">Zero<br>Açúcar</h3>
+                  <p class="product-text">
+                    Apresentamos a Linha Sem Adição de Açúcar da Frutos de Goiás: a escolha perfeita para aqueles que
+                    buscam uma opção saudável, sem perder a delícia de um bom picolé ou sorvete.
+                  </p>
+                  <a class="link-light" href="produtos.html">ver toda a linha</a>
+                </div>
+
+                <div class="product-right">
+                  <div class="product-circle">
+                    <img src="img/zero açucar.png" alt="Zero Açúcar" />
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4 Kids -->
+            <article class="product-slide">
+              <div class="product-grid">
+                <div class="product-left">
+                  <h3 class="product-title">Kids</h3>
+                  <p class="product-text">
+                    Os nossos Picolés KIDS são divididos entre tradicional e Zero Lactose, e estão disponíveis em 6
+                    sabores diferentes.
+                  </p>
+                  <a class="link-light" href="produtos.html">ver toda a linha</a>
+                </div>
+
+                <div class="product-right">
+                  <div class="product-circle">
+                    <img src="img/kids.png" alt="Linha Kids" />
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5 Paletas -->
+            <article class="product-slide">
+              <div class="product-grid">
+                <div class="product-left">
+                  <h3 class="product-title">Paletas</h3>
+                  <p class="product-text">
+                    Sabores incríveis por fora e por dentro!
+                    Temos uma explosão de sabores para todos os gostos. De frutas frescas a combinações irresistíveis,
+                    cada paleta é uma nova aventura de sabor.
+                  </p>
+                  <a class="link-light" href="produtos.html">ver toda a linha</a>
+                </div>
+
+                <div class="product-right">
+                  <div class="product-circle">
+                    <img src="img/paleta.png" alt="Paletas" />
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6 Gourmet -->
+            <article class="product-slide">
+              <div class="product-grid">
+                <div class="product-left">
+                  <h3 class="product-title">Gourmet</h3>
+                  <p class="product-text">
+                    Combinações premium e surpreendentes. Quando você quer algo realmente especial.
+                  </p>
+                  <a class="link-light" href="produtos.html">ver toda a linha</a>
+                </div>
+
+                <div class="product-right">
+                  <div class="product-circle">
+                    <img src="img/gourmet.png" alt="Linha Gourmet" />
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="slider-dots" aria-label="Navegação de produtos"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALLAX (igual vibe do site) 
+    <section class="parallax" style="--parallax:url('img/nyrc.png');" aria-hidden="true"></section> -->
+
+    <!-- DIFERENCIAIS -->
+    <section class="section section-light" id="lojas">
+      <div class="container">
+        <h2 class="section-title green">Diferenciais</h2>
+        <div class="divider"></div>
+        <p class="section-kicker">Compromisso com a Qualidade</p>
+        <div class="divider"></div>
+
+        <p class="text-block">
+          Nossas receitas são únicas, compostas por cerca de 90% de frutas frescas, resultando em um sabor mais cremoso
+          e refrescante do que você imagina. Utilizamos leite fresco, direto da fazenda, integral e natural, para
+          enriquecer ainda mais nossos sorvetes e picolés. Além disso, produzimos geleias e doces de frutas frescas que
+          são incorporados em nossos produtos, mantendo a tradição e autenticidade em cada pedacinho.ocê imagina.
+          Utilizamos leite fresco, direto da fazenda, integral e natural.
+        </p>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="40" height="40">
+                <path d="M12 3c4 3 7 5 7 9a7 7 0 1 1-14 0c0-4 3-6 7-9z" fill="none" stroke="currentColor"
+                  stroke-width="2" />
+              </svg>
+            </div>
+            <h3>Frutas Selecionadas</h3>
+            <h4>Sabor Único e Natural</h4>
+            <p>
+              Colhemos as frutas no pé e selecionamos cada uma com cuidado para levar sabores autênticos até você.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="40" height="40">
+                <path d="M4 16l6-6 4 4 6-8" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M20 20H4" fill="none" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </div>
+            <h3>Tradição e Inovação</h3>
+            <h4>Receitas Únicas</h4>
+            <p>
+              Mantemos a tradição e inovamos com combinações que surpreendem, sem perder a autenticidade.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENHA NOS CONHECER 
+    <section id="venha nos conhecer" class="section section-green">
+      <div class="container">
+        <div class="open-store-grid">
+          <div class="open-store-text">
+            <h2 class="open-store-title">Venha nos Conhecer</h2>
+            <p>
+              Ficamos Localizados na Rua da Penha, 652 - Centro Sorocaba
+              <br>
+              Ao Lado da ACM.
+
+            </p>
+            <a class="btn btn-light" href="#contato">Saiba Mais</a>
+          </div>
+
+          <div class="open-store-img">
+            <img src="img/loja.jpeg" alt="Imagem de loja" />
+          </div>
+        </div>
+      </div>
+    </section>
+  -->
+    <!-- FOOTER -->
+    <footer class="footer-ref">
+      <div class="container footer-ref__box">
+
+        <div class="footer-ref__content">
+          <p class="footer-ref__label">Fale conosco</p>
+          <a class="footer-ref__phone" href="https://wa.me/5515991764745">(15) 99176-4745</a>
+
+          <a class="footer-ref__link"
+            href="https://wa.me/5515991764745?text=Ol%C3%A1%20gostaria%20de%20trabalhar%20na%20Frutos%20de%20Goi%C3%A1s"
+            target="_blank">
+            Trabalhe Conosco
+          </a>
+
+
+        </div>
+
+        <div class="footer-ref__brand">
+          <img class="footer-ref__logo" src="img/LOGO FRUTOS DE GOIAS(1).png" alt="Frutos de Goiás - Sorocaba" />
+        </div>
+
+      </div>
+
+      <div class="footer-ref__bottom">
+        © 2026 Frutos de Goiás - Sorocaba. Todos os direitos reservados.
+      </div>
+    </footer>
+
+
+  </main>
+
+  <script src="javascript/script.js"></script>
+</body>
+
+</html>
