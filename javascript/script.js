@@ -136,15 +136,15 @@ render();
 qsa("[data-slider]").forEach(initSlider);
 
 })();
-window.addEventListener('load', () => {
-    const popup = document.getElementById('popup-cupom');
-    const fechar = document.getElementById('fechar-popup');
+// window.addEventListener('load', () => {
+  //  const popup = document.getElementById('popup-cupom');
+    //const fechar = document.getElementById('fechar-popup');
 
-    setTimeout(() => {
-        popup.style.display = 'flex';
-    }, 1500);
+    //setTimeout(() => {
+      //  popup.style.display = 'flex';
+    //}, 1500);
 
-    fechar.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
-});
+    //fechar.addEventListener('click', () => {
+   //     popup.style.display = 'none';
+    //});
+//});
