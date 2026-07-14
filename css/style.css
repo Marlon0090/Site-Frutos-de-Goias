@@ -1523,3 +1523,24 @@ footer iframe {
     margin: 8px auto 0;
   }
 }
+/* ===== Slides com banner ocupando toda a área ===== */
+
+.banner-full{
+    width:100%;
+    height:100%;
+    object-fit:fill;
+}
+
+.slide{
+    overflow:hidden;
+}
+
+.slide.banner-slide{
+    padding:0;
+}
+
+.slide.banner-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
