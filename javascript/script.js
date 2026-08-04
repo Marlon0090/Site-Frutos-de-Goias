@@ -148,3 +148,6 @@ qsa("[data-slider]").forEach(initSlider);
    //     popup.style.display = 'none';
     //});
 //});
+function abrirDelivery() {
+    window.open('https://cardapio.datacaixa.com.br/frutos', '_blank');
+}

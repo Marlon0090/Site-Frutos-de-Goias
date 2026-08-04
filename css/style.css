@@ -1544,3 +1544,76 @@ footer iframe {
     height:100%;
     object-fit:cover;
 }
+.banner-slide a{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.banner-slide a img{
+    display:block;
+    width:100%;
+}
+
+.banner-slide a:hover{
+    cursor:pointer;
+}
+.hero-mobile {
+    display:none;
+}
+
+
+@media(max-width:768px){
+
+    .hero-mobile {
+        display:block;
+        background:#fff8e9;
+        margin:15px;
+        border-radius:20px;
+        padding:25px 20px;
+        text-align:center;
+        box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    }
+
+
+    .hero-mobile .tag {
+        font-size:12px;
+        letter-spacing:1px;
+        color:#7b8c45;
+        font-weight:bold;
+    }
+
+
+    .hero-mobile h2 {
+        color:#245c38;
+        font-size:24px;
+        margin:10px 0;
+    }
+
+
+    .hero-mobile p {
+        color:#555;
+        font-size:14px;
+        line-height:22px;
+        margin-bottom:15px;
+    }
+
+
+    .hero-mobile .beneficio {
+        color:#245c38;
+        font-weight:bold;
+        margin-bottom:15px;
+    }
+
+
+    .hero-mobile a {
+        display:inline-block;
+        background:#245c38;
+        color:white;
+        padding:13px 35px;
+        border-radius:30px;
+        text-decoration:none;
+        font-weight:bold;
+    }
+
+}

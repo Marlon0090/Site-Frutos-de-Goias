@@ -82,18 +82,71 @@
     </div>
   </header>
 
+  <section class="hero-mobile">
+
+    <div class="hero-mobile-content">
+
+      <span class="tag">
+        🍃 SABORES NATURAIS
+      </span>
+
+      <h2>
+        O verdadeiro sabor da fruta
+      </h2>
+
+      <p>
+        Sorvetes artesanais com até 90% de fruta
+        e ingredientes selecionados do Cerrado.
+      </p>
+
+      <div class="beneficio">
+        🚚 Frete grátis acima de R$ 60
+      </div>
+
+      <a href="https://cardapio.datacaixa.com.br/frutos" onclick="gtag('event', 'conversion', {
+       'send_to': 'AW-18291833181/dgx9COCFhtwcEN3ynJJE',
+       'value': 1.0,
+       'currency': 'BRL'
+   });">
+        PEDIR AGORA
+      </a>
+
+    </div>
+
+  </section>
+
   <main id="inicio">
     <!-- HERO SLIDER -->
     <section class="hero">
-      <div class="hero-slider" data-slider="hero" data-autoplay="true" data-interval="6000">
+      <div class="hero-slider" data-slider="hero" data-autoplay="true" data-interval="9000">
 
         <button class="slider-arrow prev1" type="button" aria-label="Slide anterior">‹</button>
         <button class="slider-arrow next1" type="button" aria-label="Próximo slide">›</button>
 
         <div class="slides">
 
+          <!-- ================= Slide 0 - Delivery ================= -->
+          <article class="slide banner-slide is-active" onclick="abrirDelivery();" style="cursor:pointer;">
+
+            <img class="banner-full" src="img/delivery.png" alt="Peça seu sorvete agora">
+
+          </article>
+
+          <script>
+            function abrirDelivery() {
+
+              gtag('event', 'conversion', {
+                'send_to': 'AW-18291833181/dgx9COCFhtwcEN3ynJJE',
+                'value': 1.0,
+                'currency': 'BRL'
+              });
+
+              window.location.href = "https://cardapio.datacaixa.com.br/frutos";
+            }
+          </script>
+
           <!-- ================= Slide 1 - Massa Zero ================= -->
-          <article class="slide banner-slide is-active">
+          <article class="slide banner-slide">
             <img class="banner-full" src="img/zeroaçucarmassa.png" alt="Massa Zero">
           </article>
 
@@ -121,75 +174,9 @@
               <div class="slide-media">
 
                 <div class="pack-stack pack-stack--3">
-                  <img src="img/morango.png" alt="">
-                  <img src="img/cookies.png" alt="">
-                  <img src="img/chocolate.png" alt="">
-                </div>
-
-              </div>
-
-            </div>
-
-          </article>
-
-          <!-- ================= Slide 4 - Banana ================= -->
-          <article class="slide banner-slide">
-            <img class="banner-full" src="img/banana.jpg" alt="Picolé de Banana">
-          </article>
-
-          <!-- ================= Slide 5 - Novidade Gelada ================= -->
-          <article class="slide" style="--bg:url('img/capaq_edited.png');">
-
-            <div class="container slide-grid">
-
-              <div class="slide-content">
-
-                <h1 class="slide-title">
-                  NOVIDADE<br><strong>GELADA!</strong>
-                </h1>
-
-                <p class="slide-subtitle">
-                  Experimente o delicioso Ninho com Coco.
-                </p>
-
-              </div>
-
-              <div class="slide-media">
-
-                <div class="pack-duo">
-                  <img src="img/pote coco.png" alt="">
-                  <img class="ninho" src="img/ninho com coco.png" alt="">
-                </div>
-
-              </div>
-
-            </div>
-
-          </article>
-
-          <!-- ================= Slide 6 - Linha Gourmet ================= -->
-          <article class="slide" style="--bg:url('img/capaq_edited.png');">
-
-            <div class="container slide-grid">
-
-              <div class="slide-content">
-
-                <h1 class="slide-title">
-                  LINHA<br><strong>GOURMET</strong>
-                </h1>
-
-                <p class="slide-subtitle">
-                  Sabores premium para quem ama sorvete.
-                </p>
-
-              </div>
-
-              <div class="slide-media">
-
-                <div class="pack-trio">
-                  <img class="pack-trio__a" src="img/pistache premium.png" alt="">
-                  <img class="pack-trio__b" src="img/pistache zero.png" alt="">
-                  <img class="pack-trio__c" src="img/ninho com pistache.png" alt="">
+                  <img src="img/morango.png" alt="Picolé Proteico Morango">
+                  <img src="img/cookies.png" alt="Picolé Proteico Cookies">
+                  <img src="img/chocolate.png" alt="Picolé Proteico Chocolate Belga">
                 </div>
 
               </div>
@@ -199,10 +186,80 @@
           </article>
 
         </div>
+      </div>
+    </section>
 
-        <div class="slider-dots" aria-label="Navegação de slides"></div>
+    <!-- ================= Slide 4 - Banana ================= -->
+    <article class="slide banner-slide">
+      <img class="banner-full" src="img/banana.jpg" alt="Picolé de Banana">
+    </article>
+
+    <!-- ================= Slide 5 - Novidade Gelada ================= -->
+    <article class="slide" style="--bg:url('img/capaq_edited.png');">
+
+      <div class="container slide-grid">
+
+        <div class="slide-content">
+
+          <h1 class="slide-title">
+            NOVIDADE<br><strong>GELADA!</strong>
+          </h1>
+
+          <p class="slide-subtitle">
+            Experimente o delicioso Ninho com Coco.
+          </p>
+
+        </div>
+
+        <div class="slide-media">
+
+          <div class="pack-duo">
+            <img src="img/pote coco.png" alt="">
+            <img class="ninho" src="img/ninho com coco.png" alt="">
+          </div>
+
+        </div>
 
       </div>
+
+    </article>
+
+    <!-- ================= Slide 6 - Linha Gourmet ================= -->
+    <article class="slide" style="--bg:url('img/capaq_edited.png');">
+
+      <div class="container slide-grid">
+
+        <div class="slide-content">
+
+          <h1 class="slide-title">
+            LINHA<br><strong>GOURMET</strong>
+          </h1>
+
+          <p class="slide-subtitle">
+            Sabores premium para quem ama sorvete.
+          </p>
+
+        </div>
+
+        <div class="slide-media">
+
+          <div class="pack-trio">
+            <img class="pack-trio__a" src="img/pistache premium.png" alt="">
+            <img class="pack-trio__b" src="img/pistache zero.png" alt="">
+            <img class="pack-trio__c" src="img/ninho com pistache.png" alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+    </div>
+
+    <div class="slider-dots" aria-label="Navegação de slides"></div>
+
+    </div>
     </section>
 
     <section class="parallax" aria-hidden="true"></section>
