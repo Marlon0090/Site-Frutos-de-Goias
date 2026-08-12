@@ -1477,15 +1477,15 @@ footer iframe {
 }
 
 @media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .desenvolvido-por {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+  .desenvolvido-por {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
 }
 .promo-bar {
   position: sticky;
@@ -1616,4 +1616,9 @@ footer iframe {
         font-weight:bold;
     }
 
+}
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100%;
 }
