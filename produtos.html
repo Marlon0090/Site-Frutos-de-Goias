@@ -1,193 +1,414 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Produtos | Frutos de Goiás Sorocaba - Picolés e Sorvetes no Centro</title>
+    <title>Produtos | Frutos de Goiás Sorocaba</title>
 
     <meta name="description"
-        content="Catálogo de produtos Frutos de Goiás Sorocaba: picolés, sorvetes, açaí, linha zero açúcar e opções sem lactose. Rua da Penha, 652 - Centro - Sorocaba-SP." />
+        content="Conheça os produtos da Frutos de Goiás Sorocaba: picolés, sorvetes, açaí, linha zero açúcar, paletas e sabores especiais. Rua da Penha, 652 - Centro.">
 
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="produtos.html" />
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="produtos.html">
 
-    <meta property="og:title" content="Produtos | Frutos de Goiás Sorocaba" />
+    <meta property="og:title" content="Produtos | Frutos de Goiás Sorocaba">
     <meta property="og:description"
-        content="Veja o catálogo completo: picolés, sorvetes, açaí, zero açúcar e muito mais. Centro de Sorocaba." />
-    <meta property="og:type" content="website" />
+        content="Picolés, sorvetes, açaí, zero açúcar, paletas e muito mais. Confira nosso catálogo.">
+    <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <!-- Google tag (gtag.js) -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/produtos.css">
+
+    <!-- Google tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18291833181"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
         gtag('config', 'AW-18291833181');
     </script>
 
 </head>
 
 <body>
-    <div class="promo-bar">
-  🚚 FRETE GRÁTIS acima de R$ 60,00 | 🎁 10% OFF com o cupom <strong>BEMVINDO10</strong>
-  <a href="https://cardapio.datacaixa.com.br/loja=13516#">PEDIR AGORA</a>
-</div>
 
-    <header class="site-header">
+    <!-- =========================
+         PROMOÇÃO
+    ========================== -->
 
-        <div class="container header-inner">
+    <div class="produtos-promo">
 
-            <a class="brand" href="index.html#inicio" aria-label="Ir para início">
+        <div class="container produtos-promo__inner">
 
-                <img class="brand-logo" src="img/favicon.png" alt="Frutos de Goiás" />
+            <span>
+                🚚 Frete grátis acima de R$ 60
+            </span>
 
-                <div class="brand-text">
-                    <span class="brand-name">Frutos de Goiás</span>
-                    <span class="brand-sub">Sorocaba</span>
+            <span class="promo-separator">•</span>
+
+            <span>
+                10% OFF com o cupom <strong>FRUTA</strong>
+            </span>
+
+            <a href="https://cardapio.datacaixa.com.br/frutos" target="_blank" rel="noopener">
+                PEDIR AGORA
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="produtos-header">
+
+        <div class="container produtos-header__inner">
+
+            <a href="index.html#inicio" class="produtos-brand">
+
+                <img src="img/favicon.png" alt="Frutos de Goiás">
+
+                <div>
+                    <strong>Frutos de Goiás</strong>
+                    <span>Sorocaba</span>
                 </div>
 
             </a>
 
-            <nav class="nav" aria-label="Menu principal">
-                <a href="index.html#inicio">Início</a>
-                <a href="produtos.html">Produtos</a>
-                <a href="loja.html">Loja</a>
-                <a href="https://wa.me/5515991764745"> Contato</a>
-                <a href="https://cardapio.datacaixa.com.br/frutos"> Peça Já</a>
+
+            <nav class="produtos-nav">
+
+                <a href="index.html#inicio">
+                    Início
+                </a>
+
+                <a href="produtos.html" class="active">
+                    Produtos
+                </a>
+
+                <a href="loja.html">
+                    Loja
+                </a>
+
+                <a href="https://wa.me/5515991764745" target="_blank" rel="noopener">
+                    Contato
+                </a>
+
+                <a href="https://cardapio.datacaixa.com.br/frutos"
+                    class="nav-order"
+                    target="_blank"
+                    rel="noopener">
+                    Peça Já
+                </a>
+
             </nav>
 
-            <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+
+            <button
+                class="produtos-menu-button"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false">
+
                 <span></span>
                 <span></span>
                 <span></span>
+
             </button>
 
         </div>
 
-        <div class="nav-mobile" hidden>
-            <a href="index.html#inicio">Início</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="loja.html">Loja</a>
-            <a href="https://wa.me/5515991764745"> Contato</a>
+
+        <div class="produtos-mobile-menu">
+
+            <a href="index.html#inicio">
+                Início
+            </a>
+
+            <a href="produtos.html">
+                Produtos
+            </a>
+
+            <a href="loja.html">
+                Loja
+            </a>
+
+            <a href="https://wa.me/5515991764745" target="_blank" rel="noopener">
+                Contato
+            </a>
+
+            <a
+                href="https://cardapio.datacaixa.com.br/frutos"
+                class="mobile-order"
+                target="_blank"
+                rel="noopener">
+
+                Pedir agora
+
+            </a>
+
         </div>
 
     </header>
 
-    <main id="produtos-page">
 
-        <section class="section section-green products-hero">
+    <main>
 
-            <div class="container">
 
-                <p class="products-eyebrow">Catálogo completo</p>
+        <!-- =========================
+             HERO
+        ========================== -->
 
-                <h1 class="products-title">
-                    Picolés e Sorvetes em Sorocaba
-                </h1>
+        <section class="produtos-hero">
 
-                <p class="products-subtitle">
-                    90% fruta • Zero Açúcar • Opções sem lactose • Sem glúten
-                </p>
+            <div class="produtos-hero__glow"></div>
 
-                <div class="products-cta">
+            <div class="container produtos-hero__grid">
 
-                    <a class="btn btn-light"
-                        href="https://www.ifood.com.br/delivery/sorocaba-sp/frutos-de-goias-centro/fcce376b-7587-41eb-a447-be9b7e7a12a6?utm_medium=share"
-                        target="_blank" rel="noopener">
+                <div class="produtos-hero__content">
 
-                        Pedir pelo iFood
+                    <span class="produtos-eyebrow">
+                        SABORES QUE VÊM DA NATUREZA
+                    </span>
 
-                    </a>
+                    <h1>
+                        Fruta de verdade.
+                        <strong>Experiências incríveis.</strong>
+                    </h1>
+
+                    <p>
+                        Descubra nossos picolés, sorvetes, açaí,
+                        paletas e linhas especiais preparados para
+                        quem valoriza sabor e qualidade.
+                    </p>
+
+                    <div class="produtos-hero__buttons">
+
+                        <a
+                            href="https://cardapio.datacaixa.com.br/frutos"
+                            class="btn btn-light"
+                            target="_blank"
+                            rel="noopener">
+
+                            Pedir pelo delivery
+
+                        </a>
+
+                        <a href="#catalogo" class="btn btn-outline-light">
+                            Ver catálogo
+                        </a>
+
+                    </div>
+
+                    <div class="produtos-hero__address">
+
+                        <span>📍</span>
+
+                        <div>
+                            <strong>Rua da Penha, 652</strong>
+                            <small>Centro · Sorocaba - SP</small>
+                        </div>
+
+                    </div>
 
                 </div>
 
-                <p class="products-address">
-                    Rua da Penha, 652 - Centro - Sorocaba-SP
-                </p>
+
+               <div class="produtos-hero__visual">
+
+    <div class="hero-image-card">
+
+        <img
+            src="img/picolés.png"
+            alt="Frutos de Goiás Sorocaba">
+
+    </div>
+
+    <div class="hero-floating-card">
+
+        <strong>90%</strong>
+        <span>de fruta</span>
+
+    </div>
+
+</div>
 
             </div>
 
         </section>
 
-        <section class="section section-light">
+
+        <!-- =========================
+             DIFERENCIAIS
+        ========================== -->
+
+        <section class="produtos-diferenciais">
 
             <div class="container">
 
-                <h2 class="section-title green products-h2">
-                    Por que a Frutos de Goiás?
-                </h2>
+                <div class="section-heading">
 
-                <div class="divider"></div>
+                    <span>POR QUE ESCOLHER A FRUTOS?</span>
 
-                <div class="products-badges">
+                    <h2>
+                        Mais fruta em cada momento.
+                    </h2>
 
-                    <div class="products-badge">
-                        🍓 <strong>90% de fruta</strong> na composição
-                    </div>
-
-                    <div class="products-badge">
-                        💚 <strong>Linha Zero Açúcar</strong>
-                    </div>
-
-                    <div class="products-badge">
-                        🥛 Opções <strong>sem lactose</strong>
-                    </div>
-
-                    <div class="products-badge">
-                        🌾 Opções <strong>sem glúten</strong>
-                    </div>
+                    <p>
+                        Produtos pensados para entregar sabor,
+                        qualidade e opções para diferentes estilos
+                        de alimentação.
+                    </p>
 
                 </div>
 
-                <p class="products-seo">
 
-                    Se você procura
-                    <strong>picolé em Sorocaba</strong>,
-                    <strong>sorveteria no Centro de Sorocaba</strong>
-                    ou
-                    <strong>picolé zero açúcar em Sorocaba</strong>,
-                    aqui você encontra variedade, qualidade e fruta de verdade.
+                <div class="diferenciais-grid">
 
-                </p>
+                    <article class="diferencial-card">
 
-            </div>
+                        <div class="diferencial-icon">
+                            🍓
+                        </div>
 
-        </section>
-
-        <section class="section section-green">
-
-            <div class="container">
-
-                <h2 class="section-title products-h2">
-                    Catálogo de Produtos
-                </h2>
-
-                <div class="catalog-card">
-
-                    <div class="catalog-card__left">
-
-                        <h3 class="catalog-card__title">
-                            Veja todos os sabores e linhas
+                        <h3>
+                            90% de fruta
                         </h3>
 
-                        <p class="catalog-card__text">
-
-                            Abrimos o catálogo em PDF para ficar leve e rápido no celular.
-                            Assim você acessa tudo sem travar.
-
+                        <p>
+                            Sabores marcantes com uma composição
+                            rica em fruta.
                         </p>
 
-                        <div class="catalog-card__actions">
+                    </article>
 
-                            <a class="btn btn-light" href="arquivos/catalogo-frutos-de-goias-sorocaba.pdf"
-                                target="_blank" rel="noopener">
 
-                                Abrir Catálogo
+                    <article class="diferencial-card">
+
+                        <div class="diferencial-icon">
+                            💚
+                        </div>
+
+                        <h3>
+                            Zero açúcar
+                        </h3>
+
+                        <p>
+                            Linha especial para quem procura
+                            opções sem adição de açúcar.
+                        </p>
+
+                    </article>
+
+
+                    <article class="diferencial-card">
+
+                        <div class="diferencial-icon">
+                            🥛
+                        </div>
+
+                        <h3>
+                            Sem lactose
+                        </h3>
+
+                        <p>
+                            Temos opções sem lactose para você
+                            aproveitar ainda mais.
+                        </p>
+
+                    </article>
+
+
+                    <article class="diferencial-card">
+
+                        <div class="diferencial-icon">
+                            🌾
+                        </div>
+
+                        <h3>
+                            Sem glúten
+                        </h3>
+
+                        <p>
+                            Diversas opções para diferentes
+                            necessidades e preferências.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        
+
+
+        <!-- =========================
+             CATÁLOGO PDF
+        ========================== -->
+
+        <section class="catalogo-section" id="catalogo">
+
+            <div class="container">
+
+                <div class="catalogo-card">
+
+                    <div class="catalogo-content">
+
+                        <span>
+                            CATÁLOGO COMPLETO
+                        </span>
+
+                        <h2>
+                            Quer conhecer todos
+                            os nossos sabores?
+                        </h2>
+
+                        <p>
+                            Acesse nosso catálogo completo e confira
+                            todas as opções disponíveis na Frutos
+                            de Goiás Sorocaba.
+                        </p>
+
+                        <div class="catalogo-buttons">
+
+                            <a
+                                href="arquivos/catalogo-frutos-de-goias-sorocaba.pdf"
+                                class="btn btn-green"
+                                target="_blank"
+                                rel="noopener">
+
+                                Abrir catálogo
+
+                            </a>
+
+                            <a
+                                href="https://cardapio.datacaixa.com.br/frutos"
+                                class="catalogo-link"
+                                target="_blank"
+                                rel="noopener">
+
+                                Ou peça direto pelo delivery →
 
                             </a>
 
@@ -195,11 +416,23 @@
 
                     </div>
 
-                    <div class="catalog-card__right" aria-hidden="true">
 
-                        <div class="catalog-mock">
-                            <span>CATÁLOGO COMPLETO</span>
-                            <small>PDF</small>
+                    <div class="catalogo-visual">
+
+                        <div class="catalogo-paper">
+
+                            <span>
+                                FRUTOS
+                            </span>
+
+                            <strong>
+                                DE GOIÁS
+                            </strong>
+
+                            <small>
+                                SORVETES · PICOLÉS · AÇAÍ
+                            </small>
+
                         </div>
 
                     </div>
@@ -210,56 +443,210 @@
 
         </section>
 
-        <footer class="footer-ref">
-      <div class="container footer-ref__box">
 
-        <div class="footer-ref__content">
-          <p class="footer-ref__label">Fale conosco</p>
-          <a class="footer-ref__phone" href="https://wa.me/5515991764745">(15) 99176-4745</a>
+        <!-- =========================
+             SEO / TEXTO
+        ========================== -->
 
-          <a class="footer-ref__link"
-            href="https://wa.me/5515991764745?text=Ol%C3%A1%20gostaria%20de%20trabalhar%20na%20Frutos%20de%20Goi%C3%A1s"
-            target="_blank">
-            Trabalhe Conosco
-          </a>
+        <section class="produtos-seo">
+
+            <div class="container produtos-seo__inner">
+
+                <span>
+                    FRUTOS DE GOIÁS SOROCABA
+                </span>
+
+                <h2>
+                    Sabor, fruta e variedade
+                    no coração de Sorocaba.
+                </h2>
+
+                <p>
+                    Se você procura picolé em Sorocaba, sorveteria
+                    no Centro de Sorocaba, sorvete zero açúcar,
+                    açaí ou opções sem lactose, a Frutos de Goiás
+                    Sorocaba tem uma variedade de sabores para você.
+                </p>
+
+                <a
+                    href="https://cardapio.datacaixa.com.br/frutos"
+                    class="btn btn-green"
+                    target="_blank"
+                    rel="noopener">
+
+                    Pedir pelo delivery
+
+                </a>
+
+            </div>
+
+        </section>
 
 
-        </div>
+        <!-- =========================
+             FOOTER
+        ========================== -->
 
-        <div class="footer-ref__brand">
-          <img class="footer-ref__logo" src="img/LOGO FRUTOS DE GOIAS(1).png" alt="Frutos de Goiás - Sorocaba" />
-        </div>
+        <footer class="produtos-footer">
 
-      </div>
+            <div class="container produtos-footer__main">
 
-      <div class="MPTECH">
 
-    <p>
-        © 2026 Frutos de Goiás - Sorocaba. Todos os direitos reservados.
-    </p>
+                <div class="footer-brand">
 
-    <a
-        href="https://www.instagram.com/marlon_patrick009/"
-        target="_blank"
-        class="desenvolvido-por">
+                    <img
+                        src="img/LOGO FRUTOS DE GOIAS(1).png"
+                        alt="Frutos de Goiás Sorocaba">
 
-        <img
-            src="img/WhatsApp Image 2026-07-09 at 19.48.28.jpeg"
-            alt="MP Tech"
-            class="logo-mp">
+                    <p>
+                        Fruta de verdade, sabor de verdade.
+                    </p>
 
-        <span>
-            Desenvolvido por <strong>MP Tech</strong>
-        </span>
+                </div>
 
-    </a>
 
-</div>
-    </footer>
+                <div class="footer-column">
+
+                    <h3>
+                        Navegação
+                    </h3>
+
+                    <a href="index.html#inicio">
+                        Início
+                    </a>
+
+                    <a href="produtos.html">
+                        Produtos
+                    </a>
+
+                    <a href="loja.html">
+                        Nossa loja
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Fale conosco
+                    </h3>
+
+                    <a
+                        href="https://wa.me/5515991764745"
+                        target="_blank"
+                        rel="noopener">
+
+                        WhatsApp
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/frutosdegoias_sorocaba/"
+                        target="_blank"
+                        rel="noopener">
+
+                        Instagram
+                    </a>
+
+                    <a
+                        href="https://wa.me/5515991764745?text=Ol%C3%A1%20gostaria%20de%20trabalhar%20na%20Frutos%20de%20Goi%C3%A1s"
+                        target="_blank"
+                        rel="noopener">
+
+                        Trabalhe conosco
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column footer-location">
+
+                    <h3>
+                        Nossa loja
+                    </h3>
+
+                    <p>
+                        Rua da Penha, 652
+                    </p>
+
+                    <p>
+                        Centro · Sorocaba - SP
+                    </p>
+
+                    <p>
+                        Seg. a sáb. · 10h às 21h
+                    </p>
+
+                    <p>
+                        Domingo · 12h às 20h
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="produtos-footer__bottom">
+
+                <div class="container footer-bottom-inner">
+
+                    <span>
+                        © 2026 Frutos de Goiás Sorocaba.
+                        Todos os direitos reservados.
+                    </span>
+
+
+                    <a
+                        href="https://www.instagram.com/marlon_patrick009/"
+                        target="_blank"
+                        rel="noopener"
+                        class="footer-mptech">
+
+                        <span>
+                            Desenvolvido por
+                        </span>
+
+                        <img
+                            src="img/mptech.jpeg"
+                            alt="MP Tech">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+        <!-- =========================
+             BOTÃO FLUTUANTE
+        ========================== -->
+
+        <a
+            href="https://cardapio.datacaixa.com.br/frutos"
+            class="produtos-floating"
+            target="_blank"
+            rel="noopener">
+
+            <span>🛵</span>
+
+            <div>
+                <strong>
+                    Pedir agora
+                </strong>
+
+                <small>
+                    10% OFF · CUPOM FRUTA
+                </small>
+            </div>
+
+        </a>
 
     </main>
 
-    <script src="javascript/script.js"></script>
+
+    <script src="javascript/produtos.js"></script>
 
 </body>
 

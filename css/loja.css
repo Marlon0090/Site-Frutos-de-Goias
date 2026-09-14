@@ -1,0 +1,2086 @@
+
+/* =========================================================
+   FRUTOS DE GOIÁS SOROCABA
+   LOJA.CSS — PÁGINA DA LOJA
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+
+  --verde: #0b6f2e;
+  --verde-dark: #075523;
+  --verde-deep: #043d1b;
+  --verde-light: #eef7f0;
+
+  --creme: #faf8f2;
+  --branco: #ffffff;
+
+  --dourado: #c9a65a;
+  --dourado-light: #dfc47f;
+
+  --texto: #222;
+  --texto-light: #666;
+
+  --borda: rgba(11, 111, 46, .12);
+
+  --sombra:
+    0 18px 50px rgba(0, 0, 0, .10);
+
+  --raio: 20px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family:
+    "DM Sans",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background: var(--creme);
+
+  color: var(--texto);
+
+  line-height: 1.5;
+
+  overflow-x: hidden;
+
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.loja-container {
+
+  width: min(
+    1180px,
+    calc(100% - 40px)
+  );
+
+  margin: 0 auto;
+
+}
+
+
+/* =====================================================
+   PROMOÇÃO
+===================================================== */
+
+.produtos-promo {
+    background: var(--verde-deep);
+    color: #fff;
+    font-size: 13px;
+}
+
+.produtos-promo__inner {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.produtos-promo strong {
+    color: var(--dourado-light);
+}
+
+.produtos-promo a {
+    margin-left: 8px;
+    padding: 6px 14px;
+    border-radius: 30px;
+    background: #fff;
+    color: var(--verde-dark);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.produtos-promo a:hover {
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.loja-header {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  background: rgba(255,255,255,.96);
+
+  border-bottom: 1px solid rgba(0,0,0,.06);
+
+  backdrop-filter: blur(14px);
+
+}
+
+.loja-header-inner {
+
+  min-height: 82px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.loja-brand {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  text-decoration: none;
+
+  flex-shrink: 0;
+
+}
+
+.loja-brand img {
+
+  width: 48px;
+
+  height: 48px;
+
+  object-fit: contain;
+
+}
+
+.loja-brand div {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+.loja-brand strong {
+
+  color: var(--verde-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+
+  line-height: 1.1;
+
+}
+
+.loja-brand span {
+
+  margin-top: 3px;
+
+  color: #777;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   MENU DESKTOP
+========================================================= */
+
+.loja-nav {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+}
+
+.loja-nav a {
+
+  position: relative;
+
+  color: #444;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color .25s ease;
+
+}
+
+.loja-nav a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -8px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: var(--verde);
+
+  transition: width .25s ease;
+
+}
+
+.loja-nav a:hover {
+
+  color: var(--verde);
+
+}
+
+.loja-nav a:hover::after {
+
+  width: 100%;
+
+}
+
+.loja-nav a.active {
+
+  color: var(--verde-dark);
+
+}
+
+.loja-nav a.active::after {
+
+  width: 100%;
+
+}
+
+
+/* BOTÃO PEÇA JÁ */
+
+.loja-nav .loja-nav-button {
+
+  padding: 12px 21px;
+
+  border-radius: 999px;
+
+  background: var(--verde);
+
+  color: #fff;
+
+}
+
+.loja-nav .loja-nav-button::after {
+
+  display: none;
+
+}
+
+.loja-nav .loja-nav-button:hover {
+
+  background: var(--verde-dark);
+
+  color: #fff;
+
+  transform: translateY(-1px);
+
+}
+
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+
+.loja-menu-button {
+
+  display: none;
+
+  width: 44px;
+
+  height: 44px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: var(--verde-light);
+
+  cursor: pointer;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+}
+
+.loja-menu-button span {
+
+  width: 20px;
+
+  height: 2px;
+
+  background: var(--verde-dark);
+
+  border-radius: 10px;
+
+  transition: .25s ease;
+
+}
+
+.loja-menu-button.open span:nth-child(1) {
+
+  transform:
+    translateY(7px)
+    rotate(45deg);
+
+}
+
+.loja-menu-button.open span:nth-child(2) {
+
+  opacity: 0;
+
+}
+
+.loja-menu-button.open span:nth-child(3) {
+
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+
+}
+
+
+.loja-mobile-menu {
+
+  display: none;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.loja-hero {
+
+  position: relative;
+
+  padding: 105px 0 110px;
+
+  background:
+
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255,255,255,.09),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(201,166,90,.08),
+      transparent 28%
+    ),
+
+    linear-gradient(
+      135deg,
+      var(--verde-deep),
+      var(--verde-dark)
+    );
+
+  color: #fff;
+
+  overflow: hidden;
+
+}
+
+.loja-hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+
+  height: 500px;
+
+  right: -230px;
+
+  bottom: -300px;
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  border-radius: 50%;
+
+}
+
+.loja-hero-grid {
+
+  position: relative;
+
+  z-index: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(320px, .8fr);
+
+  gap: 80px;
+
+  align-items: center;
+
+}
+
+
+/* =========================================================
+   HERO TEXTO
+========================================================= */
+
+.loja-hero-content {
+
+  max-width: 690px;
+
+}
+
+.loja-eyebrow {
+
+  display: inline-flex;
+
+  margin-bottom: 20px;
+
+  color: var(--dourado-light);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: .18em;
+
+}
+
+.loja-hero h1 {
+
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(48px, 6vw, 78px);
+
+  font-weight: 500;
+
+  line-height: .98;
+
+  letter-spacing: -.035em;
+
+}
+
+.loja-hero h1 span {
+
+  display: block;
+
+  color: var(--dourado-light);
+
+}
+
+.loja-hero-description {
+
+  max-width: 590px;
+
+  margin-top: 27px;
+
+  color: rgba(255,255,255,.75);
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   HERO BOTÕES
+========================================================= */
+
+.loja-hero-buttons {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 35px;
+
+  flex-wrap: wrap;
+
+}
+
+.loja-button {
+
+  min-height: 52px;
+
+  padding: 0 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    border .25s ease;
+
+}
+
+.loja-button:hover {
+
+  transform: translateY(-2px);
+
+}
+
+.loja-button-light {
+
+  background: #fff;
+
+  color: var(--verde-dark);
+
+}
+
+.loja-button-light:hover {
+
+  background: #f5f5f5;
+
+}
+
+.loja-button-outline {
+
+  border: 1px solid rgba(255,255,255,.4);
+
+  color: #fff;
+
+  background: rgba(255,255,255,.04);
+
+}
+
+.loja-button-outline:hover {
+
+  border-color: #fff;
+
+  background: rgba(255,255,255,.09);
+
+}
+
+
+/* =========================================================
+   HERO CARD
+========================================================= */
+
+.loja-hero-card {
+
+  padding: 32px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.13);
+
+  border-radius: 25px;
+
+  background:
+    rgba(255,255,255,.07);
+
+  box-shadow:
+    0 25px 70px
+    rgba(0,0,0,.18);
+
+  backdrop-filter:
+    blur(16px);
+
+}
+
+.loja-card-item {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+}
+
+.loja-card-item small {
+
+  margin-bottom: 6px;
+
+  color: var(--dourado-light);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .14em;
+
+}
+
+.loja-card-item strong {
+
+  color: #fff;
+
+  font-size: 18px;
+
+}
+
+.loja-card-item span {
+
+  color: rgba(255,255,255,.7);
+
+  font-size: 14px;
+
+}
+
+.loja-card-item a {
+
+  color: #fff;
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+}
+
+.loja-card-item a:hover {
+
+  color: var(--dourado-light);
+
+}
+
+.loja-card-line {
+
+  height: 1px;
+
+  margin: 22px 0;
+
+  background:
+    rgba(255,255,255,.11);
+
+}
+
+
+/* =========================================================
+   SEÇÕES
+========================================================= */
+
+.loja-section {
+
+  padding: 100px 0;
+
+}
+
+.loja-section-light {
+
+  background: var(--creme);
+
+}
+
+.loja-gallery-section {
+
+  background: var(--verde-deep);
+
+  color: #fff;
+
+}
+
+
+/* =========================================================
+   TÍTULOS
+========================================================= */
+
+.loja-section-heading {
+
+  max-width: 720px;
+
+  margin-bottom: 55px;
+
+}
+
+.loja-section-heading > span {
+
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: var(--dourado);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: .18em;
+
+}
+
+.loja-section-heading h2 {
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  color: var(--verde-dark);
+
+  font-size:
+    clamp(36px, 4vw, 52px);
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+}
+
+.loja-section-heading > div {
+
+  width: 55px;
+
+  height: 3px;
+
+  margin-top: 20px;
+
+  border-radius: 10px;
+
+  background: var(--dourado);
+
+}
+
+.loja-heading-light h2 {
+
+  color: #fff;
+
+}
+
+.loja-heading-light > span {
+
+  color: var(--dourado-light);
+
+}
+
+
+/* =========================================================
+   SOBRE
+========================================================= */
+
+.loja-about {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 65px;
+
+  max-width: 1000px;
+
+}
+
+.loja-about p {
+
+  margin-bottom: 20px;
+
+  color: var(--texto-light);
+
+  font-size: 16px;
+
+  line-height: 1.9;
+
+}
+
+.loja-about strong {
+
+  color: var(--verde-dark);
+
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.loja-badges {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-top: 55px;
+
+}
+
+.loja-badges > div {
+
+  min-height: 145px;
+
+  padding: 25px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    var(--borda);
+
+  border-radius: 18px;
+
+  background: #fff;
+
+  box-shadow:
+    0 10px 35px
+    rgba(0,0,0,.04);
+
+}
+
+.loja-badges strong {
+
+  color: var(--verde);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 34px;
+
+  font-weight: 500;
+
+}
+
+.loja-badges span {
+
+  margin-top: 6px;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+}
+
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.loja-gallery {
+
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr;
+
+  grid-auto-rows: 250px;
+
+  gap: 15px;
+
+}
+
+.loja-gallery figure {
+
+  position: relative;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #123;
+
+}
+
+.loja-gallery-large {
+
+  grid-row: span 2;
+
+}
+
+.loja-gallery img {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform .7s ease;
+
+}
+
+.loja-gallery figure:hover img {
+
+  transform: scale(1.06);
+
+}
+
+
+/* =========================================================
+   LOCALIZAÇÃO
+========================================================= */
+
+.loja-location {
+
+  display: grid;
+
+  grid-template-columns:
+    .75fr
+    1.25fr;
+
+  gap: 55px;
+
+  align-items: stretch;
+
+}
+
+.loja-location-info {
+
+  padding: 45px;
+
+  border-radius: 24px;
+
+  background: #fff;
+
+  box-shadow:
+    var(--sombra);
+
+}
+
+.loja-location-icon {
+
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--verde-light);
+
+  font-size: 22px;
+
+}
+
+.loja-location-info h3 {
+
+  margin-top: 25px;
+
+  color: var(--verde-dark);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 27px;
+
+  font-weight: 500;
+
+}
+
+.loja-location-info > p {
+
+  margin-top: 5px;
+
+  color: #777;
+
+}
+
+.loja-hours {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin-top: 30px;
+
+  padding-top: 25px;
+
+  border-top:
+    1px solid
+    #eee;
+
+}
+
+.loja-hours strong {
+
+  margin-bottom: 5px;
+
+  color: var(--verde-dark);
+
+  font-size: 13px;
+
+}
+
+.loja-hours span {
+
+  color: #777;
+
+  font-size: 14px;
+
+}
+
+.loja-location-buttons {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 30px;
+
+  flex-wrap: wrap;
+
+}
+
+.loja-location-buttons a {
+
+  padding: 12px 17px;
+
+  border-radius: 999px;
+
+  border:
+    1px solid
+    var(--verde);
+
+  color: var(--verde-dark);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition: .25s ease;
+
+}
+
+.loja-location-buttons a:first-child {
+
+  background: var(--verde);
+
+  color: #fff;
+
+}
+
+.loja-location-buttons a:hover {
+
+  transform: translateY(-2px);
+
+}
+
+.loja-map {
+
+  min-height: 450px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  box-shadow:
+    var(--sombra);
+
+}
+
+.loja-map iframe {
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 450px;
+
+  display: block;
+
+  border: 0;
+
+}
+
+
+/* =========================================================
+   CTA DELIVERY
+========================================================= */
+
+.loja-cta {
+
+  padding: 75px 0;
+
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(255,255,255,.08),
+      transparent 35%
+    ),
+
+    var(--verde);
+
+  color: #fff;
+
+}
+
+.loja-cta-inner {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 45px;
+
+}
+
+.loja-cta-inner > div {
+
+  max-width: 700px;
+
+}
+
+.loja-cta-inner span {
+
+  color: var(--dourado-light);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: .18em;
+
+}
+
+.loja-cta h2 {
+
+  margin-top: 10px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(32px, 4vw, 52px);
+
+  font-weight: 500;
+
+  line-height: 1.08;
+
+}
+
+.loja-cta p {
+
+  margin-top: 12px;
+
+  color: rgba(255,255,255,.75);
+
+  font-size: 16px;
+
+}
+
+.loja-cta p strong {
+
+  color: #fff;
+
+}
+
+.loja-cta-inner > a {
+
+  flex-shrink: 0;
+
+  padding: 16px 28px;
+
+  border-radius: 999px;
+
+  background: #fff;
+
+  color: var(--verde-dark);
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition: .25s ease;
+
+}
+
+.loja-cta-inner > a:hover {
+
+  transform: translateY(-3px);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.loja-footer {
+
+  background: #032d14;
+
+  color: #fff;
+
+}
+
+.loja-footer-main {
+
+  padding-top: 70px;
+
+  padding-bottom: 60px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.4fr
+    .7fr
+    .9fr;
+
+  gap: 70px;
+
+}
+
+.loja-footer-brand img {
+
+  width: 190px;
+
+  max-height: 75px;
+
+  object-fit: contain;
+
+  object-position: left center;
+
+}
+
+.loja-footer-brand p {
+
+  max-width: 330px;
+
+  margin-top: 18px;
+
+  color: rgba(255,255,255,.55);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+}
+
+.loja-footer-column {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+}
+
+.loja-footer-column strong {
+
+  margin-bottom: 8px;
+
+  color: var(--dourado-light);
+
+  font-size: 11px;
+
+  letter-spacing: .15em;
+
+  text-transform: uppercase;
+
+}
+
+.loja-footer-column a,
+.loja-footer-column span {
+
+  color: rgba(255,255,255,.65);
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  line-height: 1.5;
+
+}
+
+.loja-footer-column a:hover {
+
+  color: #fff;
+
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.loja-footer-bottom {
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.09);
+
+}
+
+.loja-footer-bottom-inner {
+
+  min-height: 78px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+}
+
+.loja-footer-bottom-inner > span {
+
+  color: rgba(255,255,255,.42);
+
+  font-size: 12px;
+
+}
+
+.loja-mptech {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: rgba(255,255,255,.55);
+
+  font-size: 12px;
+
+  text-decoration: none;
+
+  transition: opacity .25s ease;
+
+}
+
+.loja-mptech img {
+
+  width: 30px;
+
+  height: 30px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+}
+
+.loja-mptech:hover {
+
+  opacity: .7;
+
+}
+
+
+/* =========================================================
+   BOTÃO FLUTUANTE
+========================================================= */
+
+.loja-floating {
+
+  position: fixed;
+
+  right: 20px;
+
+  bottom: 20px;
+
+  z-index: 900;
+
+  min-height: 50px;
+
+  padding: 0 19px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  border-radius: 999px;
+
+  background: var(--verde);
+
+  color: #fff;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.2);
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+
+}
+
+.loja-floating:hover {
+
+  background: var(--verde-dark);
+
+  transform: translateY(-3px);
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .loja-nav {
+
+    gap: 18px;
+
+  }
+
+  .loja-hero-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+  }
+
+  .loja-hero-card {
+
+    max-width: 600px;
+
+  }
+
+  .loja-badges {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+  .loja-location {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .loja-map {
+
+    min-height: 400px;
+
+  }
+
+  .loja-footer-main {
+
+    grid-template-columns:
+      1fr 1fr;
+
+  }
+
+  .loja-footer-brand {
+
+    grid-column: span 2;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .loja-container {
+
+    width: min(
+      100% - 30px,
+      600px
+    );
+
+  }
+
+
+  /* PROMO */
+
+  /* =====================================================
+   PROMOÇÃO — MOBILE
+===================================================== */
+
+.produtos-promo__inner {
+    min-height: 48px;
+    padding: 7px 0;
+    flex-wrap: wrap;
+    line-height: 1.2;
+    gap: 5px;
+    font-size: 10px;
+}
+
+.produtos-promo .promo-separator {
+    display: none;
+}
+
+.produtos-promo a {
+    margin-left: 4px;
+    padding: 5px 9px;
+    font-size: 9px;
+}
+
+  .loja-promo a {
+
+    width: 100%;
+
+    margin: 2px 0 0;
+
+  }
+
+
+  /* HEADER */
+
+  .loja-header-inner {
+
+    min-height: 70px;
+
+  }
+
+  .loja-brand img {
+
+    width: 42px;
+
+    height: 42px;
+
+  }
+
+  .loja-brand strong {
+
+    font-size: 16px;
+
+  }
+
+  .loja-brand span {
+
+    font-size: 9px;
+
+  }
+
+
+  .loja-nav {
+
+    display: none;
+
+  }
+
+  .loja-menu-button {
+
+    display: flex;
+
+  }
+
+
+  /* MENU MOBILE */
+
+  .loja-mobile-menu {
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    right: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 12px 15px 18px;
+
+    background: #fff;
+
+    border-top:
+      1px solid
+      rgba(0,0,0,.05);
+
+    box-shadow:
+      0 15px 35px
+      rgba(0,0,0,.10);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity .25s ease,
+      transform .25s ease,
+      visibility .25s ease;
+
+  }
+
+  .loja-mobile-menu.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+  }
+
+  .loja-mobile-menu a {
+
+    padding: 14px 10px;
+
+    border-bottom:
+      1px solid
+      #eee;
+
+    color: #444;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+  }
+
+  .loja-mobile-menu a:last-child {
+
+    border-bottom: 0;
+
+  }
+
+  .loja-mobile-menu a.active {
+
+    color: var(--verde);
+
+  }
+
+  .loja-mobile-menu .mobile-order {
+
+    margin-top: 10px;
+
+    border: 0;
+
+    border-radius: 999px;
+
+    background: var(--verde);
+
+    color: #fff;
+
+    text-align: center;
+
+  }
+
+
+  /* HERO */
+
+  .loja-hero {
+
+    padding: 65px 0 70px;
+
+  }
+
+  .loja-hero-grid {
+
+    gap: 38px;
+
+  }
+
+  .loja-hero h1 {
+
+    font-size: 48px;
+
+  }
+
+  .loja-hero-description {
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+  }
+
+  .loja-hero-buttons {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+  }
+
+  .loja-button {
+
+    width: 100%;
+
+  }
+
+  .loja-hero-card {
+
+    padding: 25px;
+
+  }
+
+
+  /* SEÇÕES */
+
+  .loja-section {
+
+    padding: 70px 0;
+
+  }
+
+  .loja-section-heading {
+
+    margin-bottom: 38px;
+
+  }
+
+  .loja-section-heading h2 {
+
+    font-size: 38px;
+
+  }
+
+
+  /* SOBRE */
+
+  .loja-about {
+
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+  }
+
+  .loja-about p {
+
+    font-size: 15px;
+
+  }
+
+
+  /* BADGES */
+
+  .loja-badges {
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 35px;
+
+  }
+
+  .loja-badges > div {
+
+    min-height: 125px;
+
+    padding: 20px 15px;
+
+  }
+
+  .loja-badges strong {
+
+    font-size: 29px;
+
+  }
+
+
+  /* GALERIA */
+
+  .loja-gallery {
+
+    grid-template-columns:
+      1fr 1fr;
+
+    grid-auto-rows: 180px;
+
+    gap: 10px;
+
+  }
+
+  .loja-gallery-large {
+
+    grid-row: span 2;
+
+  }
+
+  .loja-gallery figure {
+
+    border-radius: 13px;
+
+  }
+
+
+  /* LOCALIZAÇÃO */
+
+  .loja-location-info {
+
+    padding: 30px;
+
+  }
+
+  .loja-location-buttons {
+
+    flex-direction: column;
+
+  }
+
+  .loja-location-buttons a {
+
+    text-align: center;
+
+  }
+
+  .loja-map,
+  .loja-map iframe {
+
+    min-height: 330px;
+
+  }
+
+
+  /* CTA */
+
+  .loja-cta {
+
+    padding: 60px 0;
+
+  }
+
+  .loja-cta-inner {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 28px;
+
+  }
+
+  .loja-cta-inner > a {
+
+    width: 100%;
+
+    text-align: center;
+
+  }
+
+
+  /* FOOTER */
+
+  .loja-footer-main {
+
+    padding-top: 50px;
+
+    padding-bottom: 45px;
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+  }
+
+  .loja-footer-brand {
+
+    grid-column: auto;
+
+  }
+
+  .loja-footer-brand img {
+
+    width: 170px;
+
+  }
+
+  .loja-footer-bottom-inner {
+
+    min-height: auto;
+
+    padding: 22px 0;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+
+  }
+
+
+  /* FLOATING */
+
+  .loja-floating {
+
+    right: 15px;
+
+    bottom: 15px;
+
+    min-height: 48px;
+
+    padding: 0 16px;
+
+  }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .loja-hero h1 {
+
+    font-size: 42px;
+
+  }
+
+  .loja-section-heading h2 {
+
+    font-size: 34px;
+
+  }
+
+  .loja-badges {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .loja-gallery {
+
+    grid-template-columns: 1fr;
+
+    grid-auto-rows: 220px;
+
+  }
+
+  .loja-gallery-large {
+
+    grid-row: auto;
+
+  }
+
+  .loja-gallery figure {
+
+    height: 220px;
+
+  }
+
+}
+

@@ -1,153 +1,399 @@
-(function () {
+/* =========================================================
+   FRUTOS DE GOIÁS SOROCABA
+   JAVASCRIPT — NOVA VERSÃO
+========================================================= */
 
-function qs(sel, el = document) { return el.querySelector(sel); }
-function qsa(sel, el = document) { return Array.from(el.querySelectorAll(sel)); }
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* =======================================================
+     MENU MOBILE
+  ======================================================= */
+
+  const navToggle = document.querySelector(".nav-toggle");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  if (navToggle && mobileNav) {
+
+    navToggle.addEventListener("click", () => {
+      mobileNav.classList.toggle("open");
+
+      const opened = mobileNav.classList.contains("open");
+
+      navToggle.setAttribute(
+        "aria-expanded",
+        opened ? "true" : "false"
+      );
+    });
 
 
-// ===== MOBILE MENU =====
+    const mobileLinks = mobileNav.querySelectorAll("a");
 
-const toggle = qs(".nav-toggle");
-const mobile = qs(".nav-mobile");
+    mobileLinks.forEach(link => {
 
-if (toggle && mobile) {
+      link.addEventListener("click", () => {
+        mobileNav.classList.remove("open");
 
-toggle.addEventListener("click", () => {
+        navToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+      });
 
-mobile.classList.toggle("open");
+    });
+
+  }
+
+
+  /* =======================================================
+     SLIDER PRINCIPAL
+  ======================================================= */
+
+  const slider = document.querySelector("[data-slider]");
+
+  if (slider) {
+
+    const slides = Array.from(
+      slider.querySelectorAll(".hero-slide")
+    );
+
+    const nextButton = slider.querySelector(
+      ".slider-arrow--next"
+    );
+
+    const prevButton = slider.querySelector(
+      ".slider-arrow--prev"
+    );
+
+    const dotsContainer = slider.querySelector(
+      ".slider-dots"
+    );
+
+    let currentSlide = 0;
+    let autoplay;
+
+
+    /* -----------------------------------------------
+       CRIA DOTS
+    ------------------------------------------------ */
+
+    slides.forEach((slide, index) => {
+
+      const dot = document.createElement("button");
+
+      dot.type = "button";
+      dot.className = "slider-dot";
+
+      dot.setAttribute(
+        "aria-label",
+        `Ir para slide ${index + 1}`
+      );
+
+      dot.addEventListener("click", () => {
+        goToSlide(index);
+        restartAutoplay();
+      });
+
+      dotsContainer.appendChild(dot);
+
+    });
+
+
+    const dots = Array.from(
+      dotsContainer.querySelectorAll(".slider-dot")
+    );
+
+
+    /* -----------------------------------------------
+       MOSTRA SLIDE
+    ------------------------------------------------ */
+
+    function renderSlide(index) {
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle(
+          "active",
+          i === index
+        );
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle(
+          "active",
+          i === index
+        );
+      });
+
+    }
+
+
+    /* -----------------------------------------------
+       IR PARA SLIDE
+    ------------------------------------------------ */
+
+    function goToSlide(index) {
+
+      if (index < 0) {
+        index = slides.length - 1;
+      }
+
+      if (index >= slides.length) {
+        index = 0;
+      }
+
+      currentSlide = index;
+
+      renderSlide(currentSlide);
+
+    }
+
+
+    /* -----------------------------------------------
+       PRÓXIMO
+    ------------------------------------------------ */
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+
+    /* -----------------------------------------------
+       ANTERIOR
+    ------------------------------------------------ */
+
+    function previousSlide() {
+      goToSlide(currentSlide - 1);
+    }
+
+
+    /* -----------------------------------------------
+       EVENTOS
+    ------------------------------------------------ */
+
+    if (nextButton) {
+
+      nextButton.addEventListener("click", () => {
+
+        nextSlide();
+        restartAutoplay();
+
+      });
+
+    }
+
+
+    if (prevButton) {
+
+      prevButton.addEventListener("click", () => {
+
+        previousSlide();
+        restartAutoplay();
+
+      });
+
+    }
+
+
+    /* -----------------------------------------------
+       AUTOPLAY
+    ------------------------------------------------ */
+
+    function startAutoplay() {
+
+      autoplay = setInterval(() => {
+
+        nextSlide();
+
+      }, 6500);
+
+    }
+
+
+    function restartAutoplay() {
+
+      clearInterval(autoplay);
+
+      startAutoplay();
+
+    }
+
+
+    /* -----------------------------------------------
+       PAUSA AO PASSAR O MOUSE
+    ------------------------------------------------ */
+
+    slider.addEventListener("mouseenter", () => {
+      clearInterval(autoplay);
+    });
+
+
+    slider.addEventListener("mouseleave", () => {
+      startAutoplay();
+    });
+
+
+    /* -----------------------------------------------
+       TOUCH / SWIPE
+    ------------------------------------------------ */
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+
+    slider.addEventListener(
+      "touchstart",
+      event => {
+
+        touchStartX =
+          event.changedTouches[0].screenX;
+
+      },
+      { passive: true }
+    );
+
+
+    slider.addEventListener(
+      "touchend",
+      event => {
+
+        touchEndX =
+          event.changedTouches[0].screenX;
+
+        handleSwipe();
+
+      },
+      { passive: true }
+    );
+
+
+    function handleSwipe() {
+
+      const difference =
+        touchStartX - touchEndX;
+
+      if (Math.abs(difference) < 50) {
+        return;
+      }
+
+      if (difference > 0) {
+        nextSlide();
+      } else {
+        previousSlide();
+      }
+
+      restartAutoplay();
+
+    }
+
+
+    /* -----------------------------------------------
+       INICIA
+    ------------------------------------------------ */
+
+    renderSlide(0);
+    startAutoplay();
+
+  }
+
+
+  /* =======================================================
+     FECHA MENU AO CLICAR FORA
+  ======================================================= */
+
+  document.addEventListener("click", event => {
+
+    if (!mobileNav || !navToggle) {
+      return;
+    }
+
+    const clickedInsideMenu =
+      mobileNav.contains(event.target);
+
+    const clickedToggle =
+      navToggle.contains(event.target);
+
+    if (
+      mobileNav.classList.contains("open") &&
+      !clickedInsideMenu &&
+      !clickedToggle
+    ) {
+
+      mobileNav.classList.remove("open");
+
+      navToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
+
+  });
+
+
+  /* =======================================================
+     ANIMAÇÃO SUAVE DOS ELEMENTOS AO ENTRAR NA TELA
+  ======================================================= */
+
+  const animatedElements = document.querySelectorAll(
+    ".product-card, .about-feature, .store-content, .store-image"
+  );
+
+
+  if ("IntersectionObserver" in window) {
+
+    const observer = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform =
+              "translateY(0)";
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    animatedElements.forEach(element => {
+
+      element.style.opacity = "0";
+      element.style.transform =
+        "translateY(20px)";
+      element.style.transition =
+        "opacity .7s ease, transform .7s ease";
+
+      observer.observe(element);
+
+    });
+
+  }
+
 
 });
 
-}
 
+/* =========================================================
+   GOOGLE ADS — CLIQUE NO DELIVERY
+========================================================= */
 
-// ===== DESATIVA SLIDER NO MOBILE =====
+function trackDeliveryClick() {
 
-if (window.innerWidth <= 768) {
+  if (typeof gtag !== "function") {
+    return;
+  }
 
-const slider = qs(".hero-slider");
+  gtag("event", "conversion", {
+    "send_to": "AW-18291833181"
+  });
 
-if (slider) {
-
-const slides = qsa(".slides article", slider);
-const arrows = qsa(".slider-arrow", slider);
-const dots = qs(".slider-dots", slider);
-
-// mostra apenas o primeiro slide
-slides.forEach((slide, i) => {
-slide.classList.remove("is-active");
-if (i === 0) {
-slide.style.display = "block";
-slide.classList.add("is-active");
-} else {
-slide.style.display = "none";
-}
-});
-
-// remove setas
-arrows.forEach(a => a.style.display = "none");
-
-// remove dots
-if (dots) dots.style.display = "none";
-
-}
-
-return;
-
-}
-
-
-// ===== SLIDER DESKTOP =====
-
-function initSlider(root) {
-
-const slidesWrap = qs(".slides", root);
-if (!slidesWrap) return;
-
-const slides = qsa(":scope > .slides > article", root);
-if (!slides.length) return;
-
-const prevBtn = qs(".slider-arrow.prev", root) || qs(".slider-arrow.prev1", root);
-const nextBtn = qs(".slider-arrow.next", root) || qs(".slider-arrow.next1", root);
-const dotsWrap = qs(".slider-dots", root);
-
-let index = 0;
-
-let dots = [];
-
-if (dotsWrap) {
-
-dotsWrap.innerHTML = "";
-
-dots = slides.map((_, i) => {
-
-const b = document.createElement("button");
-
-if (i === 0) b.classList.add("is-active");
-
-b.addEventListener("click", () => goTo(i));
-
-dotsWrap.appendChild(b);
-
-return b;
-
-});
-
-}
-
-function render() {
-
-slides.forEach((s, i) => s.classList.toggle("is-active", i === index));
-
-if (dots.length) {
-dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
-}
-
-}
-
-function goTo(i) {
-
-index = (i + slides.length) % slides.length;
-
-render();
-
-}
-
-function next() {
-
-goTo(index + 1);
-
-}
-
-function prev() {
-
-goTo(index - 1);
-
-}
-
-if (nextBtn) nextBtn.addEventListener("click", next);
-if (prevBtn) prevBtn.addEventListener("click", prev);
-
-setInterval(next, 5000);
-
-render();
-
-}
-
-qsa("[data-slider]").forEach(initSlider);
-
-})();
-// window.addEventListener('load', () => {
-  //  const popup = document.getElementById('popup-cupom');
-    //const fechar = document.getElementById('fechar-popup');
-
-    //setTimeout(() => {
-      //  popup.style.display = 'flex';
-    //}, 1500);
-
-    //fechar.addEventListener('click', () => {
-   //     popup.style.display = 'none';
-    //});
-//});
-function abrirDelivery() {
-    window.open('https://cardapio.datacaixa.com.br/frutos', '_blank');
 }

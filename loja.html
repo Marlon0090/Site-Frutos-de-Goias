@@ -1,285 +1,869 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Nossa Loja | Frutos de Goiás Sorocaba - Rua da Penha, 652</title>
+  <meta charset="UTF-8">
 
-  <!-- SEO -->
-  <meta name="description"
-    content="Conheça a Frutos de Goiás Sorocaba. Inauguramos em 22/01 na Rua da Penha, 652 - Centro - Sorocaba-SP. Sorvetes e picolés com frutas selecionadas, opções zero açúcar e muito mais." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="loja.html" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Nossa Loja | Frutos de Goiás Sorocaba" />
-  <meta property="og:description"
-    content="Inaugurada em 22/01 na Rua da Penha, 652. Conheça a loja, veja fotos e descubra nossos diferenciais." />
-  <meta property="og:type" content="website" />
+  <title>Nossa Loja | Frutos de Goiás Sorocaba</title>
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/png" href="img/favicon.png">
-  <!-- Google tag (gtag.js) -->
+  <meta
+    name="description"
+    content="Conheça a Frutos de Goiás Sorocaba na Rua da Penha, 652, Centro. Sorvetes, picolés, paletas, açaí e sabores especiais.">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="img/favicon.png">
+
+  <link
+    rel="stylesheet"
+    href="css/loja.css">
+
+  <!-- Google -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18291833181"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
 
     gtag('config', 'AW-18291833181');
   </script>
+
 </head>
 
+
 <body>
-  <!-- HEADER (mesmo padrão do index) -->
-   <div class="promo-bar">
-  🚚 FRETE GRÁTIS acima de R$ 60,00 | 🎁 10% OFF com o cupom <strong>BEMVINDO10</strong>
-  <a href="https://cardapio.datacaixa.com.br/loja=13516#">PEDIR AGORA</a>
-</div>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html#inicio" aria-label="Ir para início">
-        <img class="brand-logo" src="img/favicon.png" alt="Frutos de Goiás" />
-        <div class="brand-text">
-          <span class="brand-name">Frutos de Goiás</span>
-          <span class="brand-sub">Sorocaba</span>
+
+
+  <!-- =========================
+         PROMOÇÃO
+    ========================== -->
+
+    <div class="produtos-promo">
+
+        <div class="container produtos-promo__inner">
+
+            <span>
+                🚚 Frete grátis acima de R$ 60
+            </span>
+
+            <span class="promo-separator">•</span>
+
+            <span>
+                10% OFF com o cupom <strong>FRUTA</strong>
+            </span>
+
+            <a href="https://cardapio.datacaixa.com.br/frutos" target="_blank" rel="noopener">
+                PEDIR AGORA
+            </a>
+
         </div>
-      </a>
 
-      <nav class="nav" aria-label="Menu principal">
-        <a href="index.html#inicio">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="loja.html">Loja</a>
-        <a href="https://wa.me/5515991764745"> Contato</a>
-        <a href="https://cardapio.datacaixa.com.br/frutos"> Peça Já</a>
-      </nav>
-
-      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
 
-    <div class="nav-mobile" hidden>
-      <a href="index.html#inicio">Início</a>
-      <a href="produtos.html">Produtos</a>
-      <a href="loja.html">Loja</a>
-      <a href="https://wa.me/5515991764745"> Contato</a>
-    </div>
-
-    <!-- menu mobile -->
-    <div class="nav-mobile" hidden>
-      <a href="index.html#inicio">Início</a>
-      <a href="produtos.html">Produtos</a>
-      <a href="loja.html">Loja</a>
-      <a href="index.html#contato">Contato</a>
-    </div>
-  </header>
-
-  <main id="loja-page">
-    <!-- HERO LEVE -->
-    <section class="section section-green store-hero">
-      <div class="container store-hero__grid">
-        <div class="store-hero__text">
-          <p class="store-eyebrow">Bem-vindo(a) à nossa loja</p>
-          <h1 class="store-title">Frutos de Goiás Sorocaba</h1>
-
-          <p class="store-subtitle">
-            Inauguramos em <strong>22/01</strong> no coração da Cidade
-          </p>
-
-          <p class="store-mini">
-            A Frutos de Goiás nasceu inspirada na <strong>Cidade de Goiás</strong> e nas frutas do cerrado — com a ideia
-            de levar sabores marcantes, memória afetiva e alegria em cada pedacinho.
-          </p>
-        </div>
-
-        <div class="store-hero__card" aria-label="Informações rápidas">
-          <div class="store-info">
-            <div class="store-info__item">
-              <span class="store-info__label">Endereço</span>
-              <span class="store-info__value">Rua da Penha, 652<br>Centro — Sorocaba-SP</span>
-            </div>
-
-            <div class="store-info__item">
-              <span class="store-info__label">Diferenciais</span>
-              <span class="store-info__value">90% da <strong>Fruta</strong> no picolé, Sorvete sem <strong>Glúten
-                </strong>, Opções<strong> Zero Açucar </strong>e sem <strong>Lactose</strong> </span>
-            </div>
-
-            <div class="store-info__item">
-              <span class="store-info__label">Instagram</span>
-              <a class="store-info__link" href="https://www.instagram.com/frutosdegoias_sorocaba/" target="_blank"
-                rel="noopener">@frutosdegoias_sorocaba</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TEXTO PRINCIPAL -->
-    <section class="section section-light">
-      <div class="container">
-        <h2 class="section-title green store-h2">Sobre a nossa loja</h2>
-        <div class="divider"></div>
-
-        <div class="store-text">
-          <p>
-            A <strong>Frutos de Goiás Sorocaba</strong> foi pensada para ser aquela parada obrigatória: um lugar
-            gostoso,
-            bonito e prático para você escolher seu sabor favorito com calma — ou pedir rapidinho e receber em casa.
-          </p>
-
-          <p>
-            A marca Frutos de Goiás se destaca por trabalhar com <strong>frutas selecionadas</strong> e por ter
-            <strong>muita variedade</strong> de produtos e sabores (são dezenas e dezenas de opções).
-            Aqui em Sorocaba, a gente trouxe essa experiência para o Centro, com atendimento próximo e foco em
-            qualidade.
-          </p>
-
-          <p>
-            Se você está procurando <strong>sorveteria no Centro de Sorocaba</strong>, <strong>picolés em
-              Sorocaba</strong>
-            ou uma opção diferente para sobremesa, vem conhecer a loja na <strong>Rua da Penha, 652</strong> — ou peça
-            pelo delivery.
-          </p>
-        </div>
-
-        <div class="store-badges" role="list">
-          <div class="store-badge" role="listitem">📍 Centro de Sorocaba</div>
-          <div class="store-badge" role="listitem">🍓 Frutas selecionadas</div>
-          <div class="store-badge" role="listitem">✨ Sabores do cerrado</div>
-          <div class="store-badge" role="listitem">🍦 Variedade enorme</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALERIA DE FOTOS -->
-    <section class="section section-green">
-      <div class="container">
-        <h2 class="section-title store-h2">Fotos da loja</h2>
 
 
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
 
-        <div class="store-gallery" aria-label="Galeria de fotos da loja">
-          <figure class="store-photo">
-            <img src="img/exterior.jpeg" alt="Frutos de Goiás Sorocaba - área interna" loading="lazy" />
-          </figure>
+  <header class="loja-header">
 
-          <figure class="store-photo">
-            <img src="img/interior.jpeg" alt="Frutos de Goiás Sorocaba - vitrine e balcão" loading="lazy" />
-          </figure>
-
-          <figure class="store-photo">
-            <img src="img/instagramavel.jpeg" alt="Frutos de Goiás Sorocaba - fachada" loading="lazy" />
-          </figure>
-
-          <figure class="store-photo">
-            <img src="img/Noite.jpeg" alt="Frutos de Goiás Sorocaba - ambiente" loading="lazy" />
-          </figure>
-
-          <figure class="store-photo">
-            <img src="img/dia.jpeg" alt="Frutos de Goiás Sorocaba - detalhes do espaço" loading="lazy" />
-          </figure>
-
-          <figure class="store-photo">
-            <img src="img/sorvete1.jpeg" alt="Frutos de Goiás Sorocaba - atendimento" loading="lazy" />
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ENDEREÇO / VISITA -->
-    <section class="section section-light">
-      <div class="container">
-        <h2 class="section-title green store-h2">Onde estamos</h2>
-        <div class="divider"></div>
-
-        <div class="store-location">
-          <div class="store-location__text">
-            <p class="store-location__addr">
-              <strong>Rua da Penha, 652</strong><br />
-              Centro — Sorocaba-SP
-            </p>
-            <p class="store-location__seo">
-              Fácil acesso no Centro. Perfeito para uma pausa rápida, uma sobremesa pós-almoço ou aquele momento de
-              recompensa no fim do dia.
-            </p>
-
-            <div class="store-cta">
-              <a class="btn btn-light"
-                href="https://www.google.com/maps?q=Rua%20da%20Penha,%20652%20-%20Centro%20-%20Sorocaba-SP"
-                target="_blank" rel="noopener">
-                Abrir no Google Maps
-              </a>
-              <a class="btn btn-outline" href="https://www.instagram.com/frutosdegoias_sorocaba/" target="_blank"
-                rel="noopener">
-                Ver no Instagram
-              </a>
-            </div>
-          </div>
-
-          <div class="store-location__map">
-            <iframe title="Mapa - Frutos de Goiás Sorocaba" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Rua%20da%20Penha,%20652%20-%20Centro%20-%20Sorocaba-SP&output=embed">
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER (igual ao index) -->
-    <footer class="footer-ref">
-      <div class="container footer-ref__box">
-
-        <div class="footer-ref__content">
-          <p class="footer-ref__label">Fale conosco</p>
-          <a class="footer-ref__phone" href="https://wa.me/5515991764745">(15) 99176-4745</a>
-
-          <a class="footer-ref__link"
-            href="https://wa.me/5515991764745?text=Ol%C3%A1%20gostaria%20de%20trabalhar%20na%20Frutos%20de%20Goi%C3%A1s"
-            target="_blank">
-            Trabalhe Conosco
-          </a>
+    <div class="loja-container loja-header-inner">
 
 
-        </div>
+      <!-- LOGO -->
 
-        <div class="footer-ref__brand">
-          <img class="footer-ref__logo" src="img/LOGO FRUTOS DE GOIAS(1).png" alt="Frutos de Goiás - Sorocaba" />
-        </div>
-
-      </div>
-
-      <div class="MPTECH">
-
-    <p>
-        © 2026 Frutos de Goiás - Sorocaba. Todos os direitos reservados.
-    </p>
-
-    <a
-        href="https://www.instagram.com/marlon_patrick009/"
-        target="_blank"
-        class="desenvolvido-por">
+      <a
+        href="index.html"
+        class="loja-brand">
 
         <img
-            src="img/WhatsApp Image 2026-07-09 at 19.48.28.jpeg"
-            alt="MP Tech"
-            class="logo-mp">
+          src="img/favicon.png"
+          alt="Frutos de Goiás">
 
-        <span>
-            Desenvolvido por <strong>MP Tech</strong>
-        </span>
+        <div>
 
-    </a>
+          <strong>
+            Frutos de Goiás
+          </strong>
 
-</div>
-    </footer>
+          <span>
+            Sorocaba
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- MENU DESKTOP -->
+
+      <nav class="loja-nav">
+
+        <a href="index.html">
+          Início
+        </a>
+
+        <a href="produtos.html">
+          Produtos
+        </a>
+
+        <a
+          href="loja.html"
+          class="active">
+
+          Loja
+
+        </a>
+
+        <a
+          href="https://wa.me/5515991764745"
+          target="_blank"
+          rel="noopener">
+
+          Contato
+
+        </a>
+
+        <a
+          href="https://cardapio.datacaixa.com.br/frutos"
+          target="_blank"
+          rel="noopener"
+          class="loja-nav-button">
+
+          Peça Já
+
+        </a>
+
+      </nav>
+
+
+
+      <!-- BOTÃO MOBILE -->
+
+      <button
+        class="loja-menu-button"
+        type="button"
+        aria-label="Abrir menu">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+
+
+    <!-- MENU MOBILE -->
+
+    <div class="loja-mobile-menu">
+
+      <a href="index.html">
+        Início
+      </a>
+
+      <a href="produtos.html">
+        Produtos
+      </a>
+
+      <a
+        href="loja.html"
+        class="active">
+
+        Loja
+
+      </a>
+
+      <a
+        href="https://wa.me/5515991764745"
+        target="_blank"
+        rel="noopener">
+
+        Contato
+
+      </a>
+
+      <a
+        href="https://cardapio.datacaixa.com.br/frutos"
+        target="_blank"
+        rel="noopener"
+        class="mobile-order">
+
+        Pedir agora
+
+      </a>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="loja-hero">
+
+      <div class="loja-container loja-hero-grid">
+
+
+        <div class="loja-hero-content">
+
+          <span class="loja-eyebrow">
+            NOSSA LOJA
+          </span>
+
+          <h1>
+            Um lugar para
+            <span>saborear momentos.</span>
+          </h1>
+
+          <p class="loja-hero-description">
+
+            Conheça a Frutos de Goiás Sorocaba,
+            no coração do Centro, e descubra uma
+            experiência cheia de sabores brasileiros.
+
+          </p>
+
+
+          <div class="loja-hero-buttons">
+
+            <a
+              href="https://www.google.com/maps?q=Rua%20da%20Penha,%20652%20-%20Centro%20-%20Sorocaba-SP"
+              target="_blank"
+              rel="noopener"
+              class="loja-button loja-button-light">
+
+              Como chegar
+
+            </a>
+
+
+            <a
+              href="https://cardapio.datacaixa.com.br/frutos"
+              target="_blank"
+              rel="noopener"
+              class="loja-button loja-button-outline">
+
+              Pedir pelo delivery
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- CARD -->
+
+        <div class="loja-hero-card">
+
+          <div class="loja-card-item">
+
+            <small>
+              ENDEREÇO
+            </small>
+
+            <strong>
+              Rua da Penha, 652
+            </strong>
+
+            <span>
+              Centro — Sorocaba/SP
+            </span>
+
+          </div>
+
+
+          <div class="loja-card-line"></div>
+
+
+          <div class="loja-card-item">
+
+            <small>
+              DIFERENCIAIS
+            </small>
+
+            <span>
+              90% fruta nos picolés
+            </span>
+
+            <span>
+              Zero açúcar
+            </span>
+
+            <span>
+              Sem lactose
+            </span>
+
+            <span>
+              Sem glúten
+            </span>
+
+          </div>
+
+
+          <div class="loja-card-line"></div>
+
+
+          <div class="loja-card-item">
+
+            <small>
+              INSTAGRAM
+            </small>
+
+            <a
+              href="https://www.instagram.com/frutosdegoias_sorocaba/"
+              target="_blank"
+              rel="noopener">
+
+              @frutosdegoias_sorocaba
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SOBRE
+    ====================================================== -->
+
+    <section class="loja-section loja-section-light">
+
+      <div class="loja-container">
+
+        <div class="loja-section-heading">
+
+          <span>
+            NOSSA HISTÓRIA
+          </span>
+
+          <h2>
+            Mais que uma sorveteria.
+          </h2>
+
+          <div></div>
+
+        </div>
+
+
+        <div class="loja-about">
+
+          <div>
+
+            <p>
+              A <strong>Frutos de Goiás Sorocaba</strong>
+              foi pensada para ser aquela parada especial
+              no meio do dia: um lugar bonito, agradável
+              e prático para escolher seu sabor favorito.
+            </p>
+
+            <p>
+              A marca Frutos de Goiás nasceu inspirada
+              na riqueza das frutas brasileiras e nos
+              sabores do Cerrado.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <p>
+              Aqui em Sorocaba, trouxemos essa experiência
+              para o Centro, com atendimento próximo,
+              variedade e produtos para todos os gostos.
+            </p>
+
+            <p>
+              Seja para tomar um sorvete, experimentar
+              um picolé diferente ou simplesmente fazer
+              uma pausa no dia.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- BADGES -->
+
+        <div class="loja-badges">
+
+          <div>
+            <strong>90%</strong>
+            <span>Fruta nos picolés</span>
+          </div>
+
+          <div>
+            <strong>+</strong>
+            <span>Variedade de sabores</span>
+          </div>
+
+          <div>
+            <strong>0</strong>
+            <span>Açúcar em opções especiais</span>
+          </div>
+
+          <div>
+            <strong>100%</strong>
+            <span>Sabor brasileiro</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GALERIA
+    ====================================================== -->
+
+    <section class="loja-section loja-gallery-section">
+
+      <div class="loja-container">
+
+        <div class="loja-section-heading loja-heading-light">
+
+          <span>
+            CONHEÇA O ESPAÇO
+          </span>
+
+          <h2>
+            Nossa loja por dentro.
+          </h2>
+
+          <div></div>
+
+        </div>
+
+
+        <div class="loja-gallery">
+
+
+          <figure class="loja-gallery-large">
+
+            <img
+              src="img/exterior.jpeg"
+              alt="Exterior da Frutos de Goiás Sorocaba"
+              loading="lazy">
+
+          </figure>
+
+
+          <figure>
+
+            <img
+              src="img/interior.jpeg"
+              alt="Interior da Frutos de Goiás Sorocaba"
+              loading="lazy">
+
+          </figure>
+
+
+          <figure>
+
+            <img
+              src="img/instagramavel.jpeg"
+              alt="Espaço instagramável da loja"
+              loading="lazy">
+
+          </figure>
+
+
+          <figure>
+
+            <img
+              src="img/Noite.jpeg"
+              alt="Loja Frutos de Goiás durante a noite"
+              loading="lazy">
+
+          </figure>
+
+
+          <figure>
+
+            <img
+              src="img/dia.jpeg"
+              alt="Loja Frutos de Goiás durante o dia"
+              loading="lazy">
+
+          </figure>
+
+
+          <figure>
+
+            <img
+              src="img/sorvete1.jpeg"
+              alt="Sorvete Frutos de Goiás"
+              loading="lazy">
+
+          </figure>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LOCALIZAÇÃO
+    ====================================================== -->
+
+    <section class="loja-section loja-section-light">
+
+      <div class="loja-container">
+
+        <div class="loja-section-heading">
+
+          <span>
+            VENHA NOS VISITAR
+          </span>
+
+          <h2>
+            Onde estamos.
+          </h2>
+
+          <div></div>
+
+        </div>
+
+
+        <div class="loja-location">
+
+
+          <div class="loja-location-info">
+
+            <span class="loja-location-icon">
+              📍
+            </span>
+
+            <h3>
+              Rua da Penha, 652
+            </h3>
+
+            <p>
+              Centro — Sorocaba/SP
+            </p>
+
+
+            <div class="loja-hours">
+
+              <strong>
+                Horário de funcionamento
+              </strong>
+
+              <span>
+                Segunda a sábado: 10h às 21h
+              </span>
+
+              <span>
+                Domingo: 12h às 20h
+              </span>
+
+            </div>
+
+
+            <div class="loja-location-buttons">
+
+              <a
+                href="https://www.google.com/maps?q=Rua%20da%20Penha,%20652%20-%20Centro%20-%20Sorocaba-SP"
+                target="_blank"
+                rel="noopener">
+
+                Abrir no Google Maps
+
+              </a>
+
+
+              <a
+                href="https://www.instagram.com/frutosdegoias_sorocaba/"
+                target="_blank"
+                rel="noopener">
+
+                Instagram
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="loja-map">
+
+            <iframe
+              title="Mapa da Frutos de Goiás Sorocaba"
+              src="https://www.google.com/maps?q=Rua%20da%20Penha,%20652%20-%20Centro%20-%20Sorocaba-SP&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
+
+    <section class="loja-cta">
+
+      <div class="loja-container loja-cta-inner">
+
+        <div>
+
+          <span>
+            PEÇA PELO DELIVERY
+          </span>
+
+          <h2>
+            Seu sabor favorito
+            está esperando por você.
+          </h2>
+
+          <p>
+            Use o cupom <strong>FRUTA</strong>
+            e ganhe <strong>10% OFF</strong>.
+          </p>
+
+        </div>
+
+
+        <a
+          href="https://cardapio.datacaixa.com.br/frutos"
+          target="_blank"
+          rel="noopener">
+
+          Pedir agora
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+
   </main>
 
-  <script src="javascript/script.js"></script>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="loja-footer">
+
+    <div class="loja-container loja-footer-main">
+
+
+      <div class="loja-footer-brand">
+
+        <img
+          src="img/LOGO FRUTOS DE GOIAS(1).png"
+          alt="Frutos de Goiás Sorocaba">
+
+        <p>
+          Sabores brasileiros que transformam
+          momentos simples em experiências especiais.
+        </p>
+
+      </div>
+
+
+      <div class="loja-footer-column">
+
+        <strong>
+          Fale conosco
+        </strong>
+
+        <a
+          href="https://wa.me/5515991764745"
+          target="_blank"
+          rel="noopener">
+
+          (15) 99176-4745
+
+        </a>
+
+        <a
+          href="https://wa.me/5515991764745?text=Ol%C3%A1%20gostaria%20de%20trabalhar%20na%20Frutos%20de%20Goi%C3%A1s"
+          target="_blank"
+          rel="noopener">
+
+          Trabalhe Conosco
+
+        </a>
+
+      </div>
+
+
+      <div class="loja-footer-column">
+
+        <strong>
+          Loja
+        </strong>
+
+        <span>
+          Rua da Penha, 652
+        </span>
+
+        <span>
+          Centro — Sorocaba/SP
+        </span>
+
+        <span>
+          Seg. a sáb. 10h–21h
+        </span>
+
+        <span>
+          Domingo 12h–20h
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="loja-footer-bottom">
+
+      <div class="loja-container loja-footer-bottom-inner">
+
+        <span>
+          © 2026 Frutos de Goiás Sorocaba.
+          Todos os direitos reservados.
+        </span>
+
+
+        <a
+          href="https://www.instagram.com/marlon_patrick009/"
+          target="_blank"
+          rel="noopener"
+          class="loja-mptech">
+
+          <span>
+            Desenvolvido por
+          </span>
+
+          <img
+            src="img/mptech.jpeg"
+            alt="MP Tech">
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       BOTÃO FLUTUANTE
+  ====================================================== -->
+
+  <a
+    href="https://cardapio.datacaixa.com.br/frutos"
+    target="_blank"
+    rel="noopener"
+    class="loja-floating">
+
+    🛵
+    <span>
+      Pedir agora
+    </span>
+
+  </a>
+
+
+
+  <script>
+
+    const menuButton =
+      document.querySelector('.loja-menu-button');
+
+    const mobileMenu =
+      document.querySelector('.loja-mobile-menu');
+
+
+    if (menuButton && mobileMenu) {
+
+      menuButton.addEventListener('click', () => {
+
+        mobileMenu.classList.toggle('open');
+
+        menuButton.classList.toggle('open');
+
+      });
+
+
+      mobileMenu
+        .querySelectorAll('a')
+        .forEach(link => {
+
+          link.addEventListener('click', () => {
+
+            mobileMenu.classList.remove('open');
+
+            menuButton.classList.remove('open');
+
+          });
+
+        });
+
+    }
+
+  </script>
+
 
 </body>
 
 </html>
+
