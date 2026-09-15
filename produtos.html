@@ -484,164 +484,107 @@
 
 
         <!-- =========================
-             FOOTER
-        ========================== -->
+       FOOTER
+  ========================== -->
+  <footer class="footer">
 
-        <footer class="produtos-footer">
+    <div class="container footer-grid">
 
-            <div class="container produtos-footer__main">
+      <div class="footer-brand">
 
+        <img src="img/LOGO FRUTOS DE GOIAS(1).png" alt="Frutos de Goiás">
 
-                <div class="footer-brand">
+        <p>
+          Sorvetes e picolés naturais para deixar
+          seus momentos ainda mais especiais.
+        </p>
 
-                    <img
-                        src="img/LOGO FRUTOS DE GOIAS(1).png"
-                        alt="Frutos de Goiás Sorocaba">
-
-                    <p>
-                        Fruta de verdade, sabor de verdade.
-                    </p>
-
-                </div>
-
-
-                <div class="footer-column">
-
-                    <h3>
-                        Navegação
-                    </h3>
-
-                    <a href="index.html#inicio">
-                        Início
-                    </a>
-
-                    <a href="produtos.html">
-                        Produtos
-                    </a>
-
-                    <a href="loja.html">
-                        Nossa loja
-                    </a>
-
-                </div>
-
-
-                <div class="footer-column">
-
-                    <h3>
-                        Fale conosco
-                    </h3>
-
-                    <a
-                        href="https://wa.me/5515991764745"
-                        target="_blank"
-                        rel="noopener">
-
-                        WhatsApp
-                    </a>
-
-                    <a
-                        href="https://www.instagram.com/frutosdegoias_sorocaba/"
-                        target="_blank"
-                        rel="noopener">
-
-                        Instagram
-                    </a>
-
-                    <a
-                        href="https://wa.me/5515991764745?text=Ol%C3%A1%20gostaria%20de%20trabalhar%20na%20Frutos%20de%20Goi%C3%A1s"
-                        target="_blank"
-                        rel="noopener">
-
-                        Trabalhe conosco
-                    </a>
-
-                </div>
-
-
-                <div class="footer-column footer-location">
-
-                    <h3>
-                        Nossa loja
-                    </h3>
-
-                    <p>
-                        Rua da Penha, 652
-                    </p>
-
-                    <p>
-                        Centro · Sorocaba - SP
-                    </p>
-
-                    <p>
-                        Seg. a sáb. · 10h às 21h
-                    </p>
-
-                    <p>
-                        Domingo · 12h às 20h
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="produtos-footer__bottom">
-
-                <div class="container footer-bottom-inner">
-
-                    <span>
-                        © 2026 Frutos de Goiás Sorocaba.
-                        Todos os direitos reservados.
-                    </span>
-
-
-                    <a
-                        href="https://www.instagram.com/marlon_patrick009/"
-                        target="_blank"
-                        rel="noopener"
-                        class="footer-mptech">
-
-                        <span>
-                            Desenvolvido por
-                        </span>
-
-                        <img
-                            src="img/mptech.jpeg"
-                            alt="MP Tech">
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </footer>
-
-
-        <!-- =========================
-             BOTÃO FLUTUANTE
-        ========================== -->
-
-        <a
-            href="https://cardapio.datacaixa.com.br/frutos"
-            class="produtos-floating"
-            target="_blank"
-            rel="noopener">
-
-            <span>🛵</span>
-
-            <div>
-                <strong>
-                    Pedir agora
-                </strong>
-
-                <small>
-                    10% OFF · CUPOM BEMVINDO10
-                </small>
-            </div>
-
+        <a href="https://www.instagram.com/frutosdegoias_sorocaba/" target="_blank" rel="noopener">
+          @frutosdegoias_sorocaba
         </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Navegação</h3>
+
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="loja.html">Nossa Loja</a>
+        <a href="#diferenciais">Sobre nós</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Atendimento</h3>
+
+        <a href="https://wa.me/5515991764745" target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+
+        <a href="https://www.instagram.com/frutosdegoias_sorocaba/" target="_blank" rel="noopener">
+          Instagram
+        </a>
+
+        <a href="https://cardapio.datacaixa.com.br/frutos" target="_blank" rel="noopener"
+          onclick="trackDeliveryClick()">
+          Delivery
+        </a>
+
+        
+
+      </div>
+
+
+      <div class="footer-column footer-location">
+
+        <h3>Onde estamos</h3>
+
+        <p>
+          Rua da Penha, 652<br>
+          Centro – Sorocaba/SP
+        </p>
+
+        <p>
+          Seg. a sáb. 10h às 21h<br>
+          Domingo 12h às 20h
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container footer-bottom__inner">
+
+        <span>
+          © 2026 Frutos de Goiás Sorocaba. Todos os direitos reservados.
+        </span>
+
+        <a href="https://mptech.com.br" target="_blank" rel="noopener" class="footer-mptech">
+          <span>Desenvolvido por</span>
+          <img src="img/mptech.jpeg" alt="MP Tech">
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+        <!-- BOTÃO FLUTUANTE DELIVERY -->
+  <a href="https://cardapio.datacaixa.com.br/frutos" target="_blank" rel="noopener" class="floating-delivery"
+    aria-label="Pedir pelo delivery" onclick="trackDeliveryClick()">
+    <span>🛵</span>
+    <strong>Pedir agora</strong>
+  </a>
 
     </main>
 
