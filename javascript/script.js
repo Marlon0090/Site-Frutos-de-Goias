@@ -397,3 +397,142 @@ function trackDeliveryClick() {
   });
 
 }
+
+/* =========================================================
+   CUPOM DELIVERY — INTERAÇÃO
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const offer = document.querySelector(".mobile-offer");
+  const coupon = document.querySelector(".coupon-code");
+
+  if (!offer) return;
+
+
+  /* =======================================================
+     1. ATIVA O EFEITO QUANDO O CUPOM ENTRA NA TELA
+     ======================================================= */
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+
+      entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+          offer.classList.add("is-visible");
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.25
+    }
+  );
+
+  observer.observe(offer);
+
+
+  /* =======================================================
+     2. COPIAR CUPOM AO CLICAR
+     ======================================================= */
+
+  if (coupon) {
+
+    coupon.style.cursor = "pointer";
+    coupon.setAttribute("title", "Clique para copiar o cupom");
+
+    coupon.addEventListener("click", async () => {
+
+      const codigo = coupon.textContent.trim();
+
+      try {
+
+        await navigator.clipboard.writeText(codigo);
+
+        coupon.classList.add("copied");
+
+        const textoOriginal = coupon.textContent;
+
+        coupon.textContent = "COPIADO! ✓";
+
+        setTimeout(() => {
+
+          coupon.textContent = textoOriginal;
+          coupon.classList.remove("copied");
+
+        }, 1800);
+
+      } catch (error) {
+
+        /* Fallback para navegadores que bloqueiam clipboard */
+        const textarea = document.createElement("textarea");
+
+        textarea.value = codigo;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+
+        document.body.appendChild(textarea);
+
+        textarea.select();
+
+        try {
+          document.execCommand("copy");
+        } catch (e) {
+          console.warn("Não foi possível copiar o cupom.");
+        }
+
+        textarea.remove();
+
+        coupon.classList.add("copied");
+
+        const textoOriginal = coupon.textContent;
+
+        coupon.textContent = "COPIADO! ✓";
+
+        setTimeout(() => {
+
+          coupon.textContent = textoOriginal;
+          coupon.classList.remove("copied");
+
+        }, 1800);
+
+      }
+
+    });
+
+  }
+
+
+  /* =======================================================
+     3. PEQUENO DESTAQUE NO BOTÃO
+     Depois que a pessoa visualiza o cupom,
+     o botão ganha atenção uma vez.
+     ======================================================= */
+
+  let buttonAnimationDone = false;
+
+  offer.addEventListener("transitionend", () => {
+
+    if (buttonAnimationDone) return;
+
+    const button = offer.querySelector(".mobile-offer__button");
+
+    if (!button) return;
+
+    buttonAnimationDone = true;
+
+    setTimeout(() => {
+      button.classList.add("attention");
+
+      setTimeout(() => {
+        button.classList.remove("attention");
+      }, 900);
+
+    }, 500);
+
+  });
+
+});
+

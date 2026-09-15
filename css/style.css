@@ -2117,3 +2117,300 @@ button {
   }
 
 }
+
+/* =========================================================
+   CUPOM — EFEITOS DE DESTAQUE
+   ========================================================= */
+
+.mobile-offer {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Brilho suave passando pelo card */
+.mobile-offer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: offerShine 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes offerShine {
+  0%,
+  65% {
+    left: -120%;
+  }
+
+  80% {
+    left: 140%;
+  }
+
+  100% {
+    left: 140%;
+  }
+}
+
+
+/* =========================================================
+   SELO 10% OFF
+   ========================================================= */
+
+.mobile-offer__discount {
+  position: relative;
+  animation: discountPulse 2.4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes discountPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+
+/* =========================================================
+   CUPOM
+   ========================================================= */
+
+.mobile-offer__coupon {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Brilho passando pelo cupom */
+.mobile-offer__coupon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: couponShine 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes couponShine {
+  0%,
+  60% {
+    left: -100%;
+  }
+
+  75% {
+    left: 150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+
+/* Código do cupom */
+.coupon-code {
+  display: inline-block;
+  animation: couponCodePulse 3s ease-in-out infinite;
+}
+
+@keyframes couponCodePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+
+/* =========================================================
+   BOTÃO PEDIR AGORA
+   ========================================================= */
+
+.mobile-offer__button {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Brilho do botão */
+.mobile-offer__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: buttonShine 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes buttonShine {
+  0%,
+  55% {
+    left: -120%;
+  }
+
+  70% {
+    left: 150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+
+/* Seta do botão */
+.mobile-offer__button span {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.mobile-offer__button:hover {
+  transform: translateY(-3px);
+}
+
+.mobile-offer__button:hover span {
+  transform: translateX(6px);
+}
+
+
+/* =========================================================
+   EFEITO AO PASSAR O MOUSE NO CUPOM
+   ========================================================= */
+
+.mobile-offer__coupon:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+   Respeita usuários que preferem menos animação
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .mobile-offer::before,
+  .mobile-offer__discount,
+  .mobile-offer__coupon::after,
+  .coupon-code,
+  .mobile-offer__button::before {
+    animation: none;
+  }
+
+  .mobile-offer__button,
+  .mobile-offer__button span,
+  .mobile-offer__coupon {
+    transition: none;
+  }
+}
+
+
+/* =========================================================
+   ESTADOS CONTROLADOS PELO JAVASCRIPT
+   ========================================================= */
+
+.mobile-offer {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.mobile-offer.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Cupom copiado */
+
+.coupon-code.copied {
+  transform: scale(1.08);
+  letter-spacing: 0.04em;
+}
+
+
+/* Destaque rápido no botão */
+
+.mobile-offer__button.attention {
+  animation: buttonAttention 0.9s ease;
+}
+
+@keyframes buttonAttention {
+
+  0% {
+    transform: scale(1);
+  }
+
+  35% {
+    transform: scale(1.06);
+  }
+
+  65% {
+    transform: scale(0.98);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+/* Respeita preferência de menos movimento */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .mobile-offer {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .mobile-offer__button.attention {
+    animation: none;
+  }
+
+}
+
